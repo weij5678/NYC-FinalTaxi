@@ -1,0 +1,29 @@
+# Site settings
+title: "Multivariate Statistics Project"
+description: "A website showcasing my dimension reduction project"
+url: "https://weij5678.github.io/NYC-Taxi/"  
+author: Weiran Jiang
+
+# Theme settings
+theme: minima # You can replace this with other supported GitHub Pages themes like jekyll-theme-cayman, slate, etc.
+
+header_pages:
+  - Data.md
+  - Methodology.md
+  - Results.md
+  - Conclusions.md
+  
+# Optional plugins
+plugins:
+  - jekyll-feed  # This plugin adds an RSS feed to your site
+  - jekyll-seo-tag  # Adds SEO optimization tags to your site
+  - jekyll-sitemap  # Automatically generates a sitemap
+
+
+
+# Markdown settings
+markdown: kramdown  # Default for GitHub Pages
+highlighter: rouge  # Syntax highlighting for code blocks
+
+# Build settings (optional)
+future: true  # Show future-dated posts
