@@ -30,7 +30,7 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
 
 - **Interpretation**:
   - PC1 explains the largest proportion of variance where most of the variables have negative loadings, meaning higher values for these variables are associated with lower PC1 scores.
-  - Variables like **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales_Tax have strong negative loadings.
+  - Variables like **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales Tax** have strong negative loadings.
   - These variables indicate longer, more expensive trips are heavily driving PC1. Riders with high scores on these variables are likely associated with Cluster 3 (from the earlier K-means plot).
 
 - **Determining Optimal Clusters**:
