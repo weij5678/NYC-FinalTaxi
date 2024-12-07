@@ -14,12 +14,10 @@ In this section, we present the key results from K-means clustering, Model-Based
 
 - 
 ### a. ** Rush Hour K-means Clusters**
-To identify the most important principal components, a scree plot was first generated.
+The K-means Clustering Method produced three clusters shown below:
 
-- **Visualization**:
 
-  
-<img src="images/FullScreeplot.png" alt="drawing" width="600"/>
+<img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
 
 - **Interpretation**:
