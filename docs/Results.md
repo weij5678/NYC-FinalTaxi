@@ -128,19 +128,16 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 
  
 ### d. **Comparing K-means vs Model Based Clustering Methods**
-- After visualizing the bar plots, canonical correlations were calculated to assess the association between the covariates.
-- A test for the significance of these correlations revealed that the first two canonical variate pairs were significant and prompted further exploration, as shown above in the bar plots. 
+- We want to compare the K-means Cluster vs Model Based produced clsuters to see which one should be used for inference.
+- To do so, we want to find the clusters that minimized the total within-cluster variation and the total between-cluster variation 
+- The diagram below shows that k-means cluster seems to be the most optimal for both rush hour and non-rush hour 
 
-- **Visualization**:
 
-<img src="images/CanonicalStructure.png" alt="drawing" width="600"/>
+<img src="images/Compare.png" alt="drawing" width="600"/>
 
-- **Interpretation**:
-  - The first canonical variate pair (u1 and v1) in the visualization shows a canonical correlation of 0.21, which means that 21% of the variance in the summary weather conditions can be explained by the summary of trip characteristics.
-  - This suggests a weak relationship between the two sets of variables, where factors like trip duration, trip miles, and base fare provide some explanatory power for weather conditions like temperature and humidity.
-  - However, the relatively weak correlation indicates that while trip characteristics do influence weather conditions to some extent, the relationship is not particularly strong. In other words, only a small portion of the variability in weather can be attributed to the characteristics of the trips. 
 
 ---
+
 ## 3. **Visualizing Pickup/Dropoff Locations**
 - Initially, pickup/dropoff locations were plotted based off of longitute and latitudee as points on google maps, but it was quite hard to discern the patterns.
 - Instead, hexbin plots were utilized instead in order to observe the pickup/dropoff count on top of NYC's map to osberve any patterns.
