@@ -100,11 +100,12 @@ The plot below visualizes the Model-Based Clustering (k = 3) results for the mor
 
  - **Determining Optimal Clusters**:
 
-<img src="images/NoonModel.png" alt="drawing" width="600"/>
+<img src="images/MorningBIC.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  -
+  - From the BIC plot above, it shows that the most optimal model is Mclust VEV (ellipsoidal, equal shape) model with 3 clusters. 
 
+  
 ### c. **Non-Rush Hour (Noon) Model-Based Plots**
 The plot below visualizes the Model-Based Clustering (k = 6) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters are are color-coded below:
 
@@ -120,10 +121,10 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 
  - **Determining Optimal Clusters**:
 
-   <img src="images/NoonModel.png" alt="drawing" width="600"/>
+   <img src="images/NoonBIC.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  -
+  - From the BIC plot above, it shows that the most optimal model is Mclust VEV (ellipsoidal, equal shape) model with 6 clusters.
 
  
 ### d. **Comparing K-means vs Model Based Clustering Methods**
