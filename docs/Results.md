@@ -20,13 +20,18 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
 <img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
 
-- **Interpretation**:
+- **K-means Plot**:
   - Cluster 3 (blue) is positioned on the negative side of PC1, indicating higher trip characteristics (e.g., longer trips, higher charges, and more tolls).
   - Cluster 2 (green) is positioned on the positive side of PC1, meaning this cluster has lower trip characteristics (e.g., shorter trips, lower charges, and likely fewer tolls).
   - Overall, the clusters are well-separated along PC1, emphasizing the importance of trip characteristics in defining rider groups.
   - PC2 contributes less to the separation, suggesting that secondary factors like tipping behavior or weather are less distinct across clusters.
 
 <img src="images/MorningBarplot.png" alt="drawing" width="600"/>
+
+- **Morning PC Loadings Plot**:
+  - PC1 explains the largest proportion of variance where most of the variables have negative loadings, meaning higher values for these variables are associated with lower PC1 scores.
+  - Variables like **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales_Tax have strong negative loadings.
+  - These variables indicate longer, more expensive trips are heavily driving PC1. Riders with high scores on these variables are likely associated with Cluster 3 (from the earlier K-means plot).
 
 ### b. **Non Rush Hour K-means Clusters**
 - After selecting the first two principal components, the next step is to identify which variables play a significant role in these components.
