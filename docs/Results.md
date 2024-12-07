@@ -82,31 +82,38 @@ The plot below visualizes the K-means clustering (k = 2) results for the noon da
 ## 2. **Model-Based Clustering**
 The plot below visualizes the Model-Based Clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
 
-### a. **Rush Hour (Morning) Model Based Clustering**
+### a. **Testing Model-Based Assumptions**
 
 
-- **Morning Model-Based Plots**:
+
+### b. **Rush Hour (Morning) Model-Based Clustering**
+
+- **Morning Model-Based Plot**:
+  
 <img src="images/MorningModel.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  - X Correlation Matrix:  Among the weather variables, there is a strong positive correlation between (temperature and dew point) and (dew point and humidity), as indicated by the dark red, which is expected given that these variables often go together. In contrast, wind speed shows negative correlations with other weather factors like relative humidity (rhum) and air pressure (pres), as seen by the blue sqaures.
-  - Y Correlation Matrix: For the trip characteristics, strong positive correlations are observed between trip miles, trip distances, and base passenger fare, which makes intuitive sense since longer trips typically result in higher fares. However, tip percentage shows weaker correlations with the other trip-related variables, suggesting that tipping behavior is less influenced by trip distance or fare.
-  - The cross-correlation between weather and trip variables is weak, as shown by the green squares. This suggests that weather conditions, such as temperature, wind speed, and humidity, has weak association with  trip duration, distance, fare, or tipping percentage. 
+  - Significant overlap between the clusters, particularly between Clusters 2 and 3, suggests that while the model-based approach identifies group differences, some riders exhibit transitional or shared characteristics.
+  - The spread of Cluster 3 is broader, indicating greater variability in trip-related features for this group.
+  - Compared to K-means clustering, the separation of clusters is less distinct, particularly along PC2. This reflects the probabilistic nature of model-based clustering, which accounts for uncertainty in assigning data points to clusters.
+ 
 
-### b. **Visualizing the Canonical Covariates**
-- Although the cross-correlation between the two sets of variables (weather conditions and trip characteristics) was weak, canonical covariates were still calculated to further explore the relationships.
-- The CCA bar plots were examined to visualize how the first two pairs of canonical variates relate to each other.
+### c. **Non-Rush Hour (Noon) Model-Based Plots**
+The plot below visualizes the Model-Based Clustering (k = 6) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters are are color-coded below:
 
-- **Visualization**:
-
-<img src="images/CCAbarplot.png" alt="drawing" width="600"/>
+- **Noon Model-Based Plot**:
+  
+<img src="images/NoonModel.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  - Since u1 is heavily influenced by dew point and relative humidity, and v1 is driven by trip duration and base fare, this suggests that higher humidity and dew point might be associated with longer trip durations and higher base fares.
-  - The second pair of canonical variates(right) shows that u2 is influenced primarily by wind speed and air pressure, while v2 is driven by tolls, base fare, and tip percentage.
-  - This suggests that certain weather conditions, like higher wind speeds and air pressure, might be related to higher tolls or tipping percentages, though the strength of this relationship is quite weak.
+  - Significant overlap is observed, especially among Clusters 1, 4, and 5, suggesting some shared characteristics between these clusters.
+  - Clusters 3 and 6 have more distinct boundaries, likely reflecting trips with extreme values for trip distance or cost.
+  - Again, clusters are primarily separated along PC1, indicating that trip-related variables (e.g., trip distance, fare, and tolls) are the dominant factors in clustering.
+  - Compared to K-means clustering, the separation of clusters is much less distinct.
 
-### c. **Overall CCA Structures**
+
+ 
+### d. **Comparing K-means vs Model Based Clustering Methods**
 - After visualizing the bar plots, canonical correlations were calculated to assess the association between the covariates.
 - A test for the significance of these correlations revealed that the first two canonical variate pairs were significant and prompted further exploration, as shown above in the bar plots. 
 
