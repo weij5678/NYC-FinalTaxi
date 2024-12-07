@@ -35,7 +35,7 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
 
 - **Determining Optimal Clusters**:
   
-  <img src="images/KmeansCH.png" alt="drawing" width="600"/>
+  <img src="images/KmeanCH.png" alt="drawing" width="600"/>
   
 - **Interpretations**:
   - 
