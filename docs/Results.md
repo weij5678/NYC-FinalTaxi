@@ -51,8 +51,20 @@ This plot visualizes the K-means clustering (k = 2) results for the noon data, p
 <img src="images/NoonKmeans.png" alt="drawing" width="600"/>
 
 - **Interpretations**:
-  - Cluster 1 (red) 
-  - Cluster 2 (blue) 
+  - Cluster 1 (red) is positioned on the negative side of PC1, indicating trips with higher trip characteristics such as longer distances, higher costs.
+  - Cluster 2 (blue) is positioned on the positive side of PC1, corresponding to trips with lower trip characteristics.
+
+
+- **Determining Optimal Clusters**:
+  
+  <img src="images/NoonCH.png" alt="drawing" width="600"/>
+  
+- **Interpretations**:
+  - The CH index is highest at k = 2, suggesting that two clusters provide the strongest separation in the data.
+  - The screeplot on the right shows that the most optimal number of clusters is at k = 2 or 3.
+  - Although CH index points to 2 clusters, it seems from the plots above that there are notable difference in the three clusters and will proceed with three clusters.
+  - 
+
 
  
  ![FullBarplot](images/FullBarplot.png)
