@@ -15,7 +15,7 @@ This section presents the key results from K-means clustering, Model-Based Clust
 
 ---
 
-### a. **Rush Hour (Morning) K-means Clusters**
+### a. **Rush Hour (Morning) K-means Clusters**:
 The plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
 
 - **K-means Plot**:
@@ -80,14 +80,13 @@ The plot below visualizes the K-means clustering (k = 2) results for the noon da
 
 
 ## 2. **Model-Based Clustering**
-- Canonical Correlation Analysis (CCA) was used to explore the relationship between weather conditions (temperature, dew point, windspeed, humidity, precipitation, wind direction, and air pressure) and trip characteristics (trip duration, trip distance, base fare, toll charges, and tip percentage).
-- The analysis revealed the following:
+The plot below visualizes the Model-Based Clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
 
-### a. **Visualizing Cross-Correlation** 
-The cross-correlation matrix was examined to observe potential correlations within each category—weather conditions and trip characteristics—as well as the cross-correlations between them.
+### a. **Rush Hour (Morning) Model Based Clustering**
 
-- **Visualization**:
-<img src="images/CrossCorrelation.png" alt="drawing" width="600"/>
+
+- **Morning Model-Based Plots**:
+<img src="images/MorningModel.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
   - X Correlation Matrix:  Among the weather variables, there is a strong positive correlation between (temperature and dew point) and (dew point and humidity), as indicated by the dark red, which is expected given that these variables often go together. In contrast, wind speed shows negative correlations with other weather factors like relative humidity (rhum) and air pressure (pres), as seen by the blue sqaures.
