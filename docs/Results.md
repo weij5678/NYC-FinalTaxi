@@ -1,98 +1,85 @@
 ---
 title: Results
 layout: default
---- 
+---
 
 # Results and Visualizations
 
-In this section, we present the key results from K-means clustering, Model-Based Clustering, and Inference to understand the factors influencing tipping and FHV ride trends.
+This section presents the key results from K-means clustering, Model-Based Clustering, and Inference to better understand the factors influencing tipping behavior and FHV ride patterns.
 
 ---
+
 ## 1. **K-means Clustering**
-- Analyzed the clustering based on time period: Rush hour (Morning) vs Non-Rush hour (noon)
-- Performed K-means by initializng using hiearhcical clustering.
-  
+- Clustering analysis was conducted separately for two time periods: Rush hour (Morning) and Non-Rush hour (Noon).
+- K-means clustering was initialized using hierarchical clustering to determine starting cluster centers.
 
-### a. ** Rush Hour K-means Clusters**
-This plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, 3) are color-coded as red, green, and blue, respectively. 
+---
 
+### a. **Rush Hour (Morning) K-means Clusters**
+The plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
 
-- **Morning K-means Plot**:
-  
+- **K-means Plot**:
+
 <img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  - Cluster 3 (blue) is positioned on the negative side of PC1, indicating higher trip characteristics (e.g., longer trips, higher charges, and more tolls).
-  - Cluster 2 (green) is positioned on the positive side of PC1, meaning this cluster has lower trip characteristics (e.g., shorter trips, lower charges, and likely fewer tolls).
-  - Overall, the clusters are well-separated along PC1, emphasizing the importance of trip characteristics in defining rider groups.
-  - PC2 contributes less to the separation, suggesting that secondary factors like tipping behavior or weather are less distinct across clusters.
+  - **Cluster 3 (blue)** is positioned on the **negative side of PC1**, representing trips with higher trip characteristics (e.g., longer trips, higher charges, and more tolls).
+  - **Cluster 2 (green)** is positioned on the **positive side of PC1**, indicating trips with lower trip characteristics (e.g., shorter trips, lower charges, and likely fewer tolls).
+  - **Cluster 1 (red)** lies in between, capturing trips with moderate trip characteristics.
+  - PC1 drives most of the separation, highlighting the importance of trip-related factors, while PC2 contributes less to differentiation, capturing secondary factors like tipping behavior or weather.
 
+---
 
 - **Morning PC Loadings Plot**:
+
 <img src="images/MorningBarplot.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  - PC1 explains the largest proportion of variance where most of the variables have negative loadings, meaning higher values for these variables are associated with lower PC1 scores.
-  - Variables like **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales Tax** have strong negative loadings.
-  - These variables indicate longer, more expensive trips are heavily driving PC1. Riders with high scores on these variables are likely associated with Cluster 3 (from the earlier K-means plot).
+  - **PC1** explains the largest proportion of variance, with most variables having **negative loadings**. Higher values for these variables are associated with **lower PC1 scores**.
+  - Key contributors to PC1 include:
+    - **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales Tax**, indicating longer, more expensive trips drive the clustering.
+  - These variables strongly influence Cluster 3 (blue), which represents premium trips.
 
+---
 
 - **Determining Optimal Clusters**:
-  
-  <img src="images/KmeanCH.png" alt="drawing" width="600"/>
-  
-- **Interpretations**:
-  - The CH index is highest at k = 2, suggesting that two clusters provide the strongest separation in the data.
-  - The screeplot on the right shows that the most optimal number of clusters is at k = 2 or 3.
-  - Although CH index points to 2 clusters, it seems from the plots above that there are notable difference in the three clusters and will proceed with three clusters.
 
+<img src="images/KmeanCH.png" alt="drawing" width="600"/>
 
+- **Interpretation**:
+  - The **CH index** is highest at **k = 2**, suggesting that two clusters provide the strongest separation.
+  - The **elbow plot** also suggests the optimal number of clusters lies between **k = 2 and k = 3**.
+  - Based on visualizations and interpretability of the clustering results, **k = 3** was chosen to better differentiate distinct rider behaviors during rush hour.
 
-### b. **Non-Rush Hour K-means Clusters**
-This plot below visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2) are color-coded as red, green, and blue, respectively. 
+---
 
-- **Morning K-means Plott**:
-This plot visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). 
+### b. **Non-Rush Hour (Noon) K-means Clusters**
+The plot below visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). The clusters (1 and 2) are color-coded as red and blue, respectively.
+
+- **K-means Plot**:
 
 <img src="images/NoonKmeans.png" alt="drawing" width="600"/>
 
-- **Interpretations**:
-  - Cluster 1 (red) is positioned on the negative side of PC1, indicating trips with higher trip characteristics such as longer distances, higher costs.
-  - Cluster 2 (blue) is positioned on the positive side of PC1, corresponding to trips with lower trip characteristics.
-
-
-- **Determining Optimal Clusters**:
-  
-  <img src="images/KmeanCH1.png" alt="drawing" width="600"/>
-  
-- **Interpretations**:
-  - The CH index is highest at k = 2, suggesting that two clusters provide the strongest separation in the data.
-  - The screeplot on the right shows that the most optimal number of clusters is around k=2.
-  - From the clustering plots above that there are notable difference in the two clusters and thus, we will proceed with two clusters.
-
-
-
-### c. **Principal Component Regression**
-The Principal Component Regression (PCR) model was used to examine the relationship between tipping behavior and the first two principal components.
-
-- **PCR Results**:
-  - **(Intercept)**: The intercept of 7.00 suggests that, on average, the baseline tip percentage is around 7% when both PC1 and PC2 are zero.
-  - **PC1**: With an estimate of -0.48 and a highly significant p-value (p < 2e-16), this coefficient suggests a slight negative association between PC1 which holds most of the ride characterstics and tip_percentage, meaning that as PC1 increases, the tip percentage tends to decrease slightly.
-  - **PC2**: This coefficient is also negative but not significant (p = 0.087), indicating a weaker relationship.
-
-- **Diagnostics**:
-
-  
-<img src="images/FullRegression.png" alt="drawing" width="600"/>
-
- 
 - **Interpretation**:
-  - The Principal Component Regression model provided a simplified view of how tipping percentage relates to broader factors like trip characteristics and weather conditions (summarized by the principal components).
-  - However, the diagnostic plots reveal shortcomings, including non-linearity, heteroscedasticity, and non-normal residuals.
-  - To improve the model, further steps such as applying transformations could help better capture the relationship between tipping percentage and the underlying factors.
+  - **Cluster 1 (red)** is positioned on the **negative side of PC1**, representing trips with **higher trip characteristics**, such as longer distances and higher costs.
+  - **Cluster 2 (blue)** is positioned on the **positive side of PC1**, capturing trips with **lower trip characteristics**, such as shorter distances and lower costs.
+  - The separation between clusters is primarily driven by PC1, reflecting differences in trip-related variables.
 
 ---
-## 2. **Canonical Correlation Analysis**
+
+- **Determining Optimal Clusters**:
+
+<img src="images/KmeanCH1.png" alt="drawing" width="600"/>
+
+- **Interpretation**:
+  - The **CH index** is highest at **k = 2**, confirming that two clusters provide the strongest separation for noon data.
+  - The **elbow plot** similarly supports **k = 2** as the optimal number of clusters.
+  - The clustering results align well with these findings, so we proceed with **k = 2** clusters for non-rush hour.
+
+---
+
+
+## 2. **Model-Based Clustering**
 - Canonical Correlation Analysis (CCA) was used to explore the relationship between weather conditions (temperature, dew point, windspeed, humidity, precipitation, wind direction, and air pressure) and trip characteristics (trip duration, trip distance, base fare, toll charges, and tip percentage).
 - The analysis revealed the following:
 
