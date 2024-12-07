@@ -17,7 +17,7 @@ In this section, we present the key results from K-means clustering, Model-Based
 This plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, 3) are color-coded as red, green, and blue, respectively. 
 
 
-- **K-means Plot**:
+- **Morning K-means Plot**:
   
 <img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
@@ -51,7 +51,7 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
 ### b. **Non-Rush Hour K-means Clusters**
 This plot below visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2) are color-coded as red, green, and blue, respectively. 
 
-- **Morning PC Loadings Plot**:
+- **Morning K-means Plott**:
 This plot visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). 
 
 <img src="images/NoonKmeans.png" alt="drawing" width="600"/>
