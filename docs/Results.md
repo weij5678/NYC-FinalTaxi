@@ -11,9 +11,11 @@ In this section, we present the key results from K-means clustering, Model-Based
 ## 1. **K-means Clustering**
 - Analyzed the clustering based on time period: Rush hour (Morning) vs Non-Rush hour (noon)
 - Performed K-means by initializng using hiearhcical clustering.
+  
 
 ### a. ** Rush Hour K-means Clusters**
 This plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, 3) are color-coded as red, green, and blue, respectively. 
+
 
 - **K-means Plot**:
   
@@ -25,6 +27,7 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
   - Overall, the clusters are well-separated along PC1, emphasizing the importance of trip characteristics in defining rider groups.
   - PC2 contributes less to the separation, suggesting that secondary factors like tipping behavior or weather are less distinct across clusters.
 
+
 - **Morning PC Loadings Plot**:
 <img src="images/MorningBarplot.png" alt="drawing" width="600"/>
 
@@ -32,6 +35,7 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
   - PC1 explains the largest proportion of variance where most of the variables have negative loadings, meaning higher values for these variables are associated with lower PC1 scores.
   - Variables like **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales Tax** have strong negative loadings.
   - These variables indicate longer, more expensive trips are heavily driving PC1. Riders with high scores on these variables are likely associated with Cluster 3 (from the earlier K-means plot).
+
 
 - **Determining Optimal Clusters**:
   
@@ -41,6 +45,8 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
   - The CH index is highest at k = 2, suggesting that two clusters provide the strongest separation in the data.
   - The screeplot on the right shows that the most optimal number of clusters is at k = 2 or 3.
   - Although CH index points to 2 clusters, it seems from the plots above that there are notable difference in the three clusters and will proceed with three clusters.
+
+
 
 ### b. **Non-Rush Hour K-means Clusters**
 This plot below visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2) are color-coded as red, green, and blue, respectively. 
@@ -57,25 +63,14 @@ This plot visualizes the K-means clustering (k = 2) results for the noon data, p
 
 - **Determining Optimal Clusters**:
   
-  <img src="images/NoonCH.png" alt="drawing" width="600"/>
+  <img src="images/KmeanCH1.png" alt="drawing" width="600"/>
   
 - **Interpretations**:
   - The CH index is highest at k = 2, suggesting that two clusters provide the strongest separation in the data.
-  - The screeplot on the right shows that the most optimal number of clusters is at k = 2 or 3.
-  - Although CH index points to 2 clusters, it seems from the plots above that there are notable difference in the three clusters and will proceed with three clusters.
-  - 
+  - The screeplot on the right shows that the most optimal number of clusters is around k=2.
+  - From the clustering plots above that there are notable difference in the two clusters and thus, we will proceed with two clusters.
 
 
- 
- ![FullBarplot](images/FullBarplot.png)
-
-
-- **Interpretation**:
-  - The biplot and loadings together provide a detailed information of the key factors influencing the variability in the dataset.
-    
-  - Starting with PC1, the loadings plot shows that variables like trip distances, duration, base fare, black car fund fee, and driver pay have the largest negative contributions. This aligns with the biplot, where arrows representing these variables point are far from zero in the direction of PC1, indicating their strong influence on this component.The high loadings suggest that PC1 is primarily driven by trip related variables, meaning longer trips, higher fares, and additional charges such as sales tax and driver pay are key factors contributing to the variation in PC1.
-    
-  - In PC2, the loadings plot indicates that wind speed, wind direciton, tolls charged during, and congestion surcharge have the strongest positive contributions. In the biplot, windspeed and tolls charged are far from the origin in the direction of PC2, confirming their role as key drivers of variability in this component. This suggests that PC2 captures variability related to external factors like weather and tolls/congestion perhaps indicating different patterns of demand depending on weather conditions and traffic conditions.
 
 ### c. **Principal Component Regression**
 The Principal Component Regression (PCR) model was used to examine the relationship between tipping behavior and the first two principal components.
