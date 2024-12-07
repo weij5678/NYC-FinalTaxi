@@ -5,13 +5,12 @@ layout: default
 
 # Methodology
 
-## 1. **Principal Component Analysis (PCA)**
+## 1. **K-means Clustering**
 - **Motivation**:
-  -   Since the datasets consists of many quantitative variables, PCA was applied to reduce dimensionality and identify key variables influencing ride behavior.
-  -   PCA would help with predicting a linear model for tipping behaviors of taxi commuters.
+  -  Previous analyses revealed weak associations between tipping behavior and trip characteristics. K-means clustering provided insights into distinct rider groups and their behaviors that were not apparent through direct analysis of individual variables.
     
 - **Methodology**:
-  - Initially, separate PCA analyses were performed for the morning, noon, and evening time periods, focusing on variables such as trip duration, trip distance, fare, and weather conditions, excluding the tip percentage variable. This approach aimed to explore how factors driving ride-hailing behavior vary by time of day.
+  - First, I 
   - However, upon reviewing the visualizations, it was found that there were no significant differences between the time-specific PCA analyses.
 - As a result, a combined PCA was performed, excluding time as a factor, but still excluding the tip percentage variable in order to perform a regression on tip percentages.
 
