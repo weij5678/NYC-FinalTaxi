@@ -38,15 +38,21 @@ This plot below visualizes the K-means clustering (k = 3) results for the mornin
   <img src="images/KmeanCH.png" alt="drawing" width="600"/>
   
 - **Interpretations**:
-  - 
+  - The CH index is highest at k = 2, suggesting that two clusters provide the strongest separation in the data.
+  - The screeplot on the right shows that the most optimal number of clusters is at k = 2 or 3.
+  - Although CH index points to 2 clusters, it seems from the plots above that there are notable difference in the three clusters and will proceed with three clusters.
 
-### b. **Non Rush Hour K-means Clusters**
-- After selecting the first two principal components, the next step is to identify which variables play a significant role in these components.
-- This can be examined through a biplot and bar plot, which highlight the contribution of each variable to the first two principal components.
+### b. **Non-Rush Hour K-means Clusters**
+This plot below visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2) are color-coded as red, green, and blue, respectively. 
 
-- **Visualization**:
-  
-<img src="images/FullBiplot.png" alt="drawing" width="600"/>
+- **Morning PC Loadings Plot**:
+This plot visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). 
+
+<img src="images/NoonKmeans.png" alt="drawing" width="600"/>
+
+- **Interpretations**:
+  - Cluster 1 (red) 
+  - Cluster 2 (blue) 
 
  
  ![FullBarplot](images/FullBarplot.png)
