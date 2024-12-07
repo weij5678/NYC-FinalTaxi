@@ -128,17 +128,16 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 
  
 ### d. **Comparing K-means vs Model Based Clustering Methods**
-- We want to compare the K-means Cluster vs Model Based produced clsuters to see which one should be used for inference.
-- To do so, we want to find the clusters that minimized the total within-cluster variation and the total between-cluster variation 
-- The diagram below shows that k-means cluster seems to be the most optimal for both rush hour and non-rush hour 
-
+- We aim to compare the K-means and Model-Based clusters to determine which method is more suitable for inference.
+- To make this comparison, we assess the clusters based on their ability to minimize the total within-cluster variation and maximize the total between-cluster variation.
+- The diagram below indicate that K-means clustering is the most optimal approach for both rush hour (blue) and non-rush hour (red), as it minimizes the total within-cluster variation while maximizing the total between-cluster variation.
 
 <img src="images/Compare.png" alt="drawing" width="600"/>
 
 
 ---
 
-## 3. **Visualizing Pickup/Dropoff Locations**
+## 3. **Inference**
 - Initially, pickup/dropoff locations were plotted based off of longitute and latitudee as points on google maps, but it was quite hard to discern the patterns.
 - Instead, hexbin plots were utilized instead in order to observe the pickup/dropoff count on top of NYC's map to osberve any patterns.
 
