@@ -12,26 +12,33 @@ In this section, we present the key results from K-means clustering, Model-Based
 - Analyzed the clustering based on time period: Rush hour (Morning) vs Non-Rush hour (noon)
 - Performed K-means by initializng using hiearhcical clustering.
 
-- 
 ### a. ** Rush Hour K-means Clusters**
 This plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, 3) are color-coded as red, green, and blue, respectively. 
 
-
+- **K-means Plot**:
+  
 <img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
-
-- **K-means Plot**:
+- **Interpretation**:
   - Cluster 3 (blue) is positioned on the negative side of PC1, indicating higher trip characteristics (e.g., longer trips, higher charges, and more tolls).
   - Cluster 2 (green) is positioned on the positive side of PC1, meaning this cluster has lower trip characteristics (e.g., shorter trips, lower charges, and likely fewer tolls).
   - Overall, the clusters are well-separated along PC1, emphasizing the importance of trip characteristics in defining rider groups.
   - PC2 contributes less to the separation, suggesting that secondary factors like tipping behavior or weather are less distinct across clusters.
 
+- **Morning PC Loadings Plot**:
 <img src="images/MorningBarplot.png" alt="drawing" width="600"/>
 
-- **Morning PC Loadings Plot**:
+- **Interpretation**:
   - PC1 explains the largest proportion of variance where most of the variables have negative loadings, meaning higher values for these variables are associated with lower PC1 scores.
   - Variables like **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales_Tax have strong negative loadings.
   - These variables indicate longer, more expensive trips are heavily driving PC1. Riders with high scores on these variables are likely associated with Cluster 3 (from the earlier K-means plot).
+
+- **Determining Optimal Clusters**:
+  
+  <img src="images/KmeansCH.png" alt="drawing" width="600"/>
+  
+- **Interpretations**:
+  - 
 
 ### b. **Non Rush Hour K-means Clusters**
 - After selecting the first two principal components, the next step is to identify which variables play a significant role in these components.
