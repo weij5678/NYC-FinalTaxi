@@ -7,59 +7,49 @@ layout: default
 
 ## 1. **K-means Clustering**
 - **Motivation**:
-  -  Previous analyses revealed weak associations between tipping behavior and trip characteristics. K-means clustering provided insights into distinct rider groups and their behaviors that were not apparent through direct analysis of individual variables.
-    
-- **Methodology**:
-  - First, I 
-  - However, upon reviewing the visualizations, it was found that there were no significant differences between the time-specific PCA analyses.
-- As a result, a combined PCA was performed, excluding time as a factor, but still excluding the tip percentage variable in order to perform a regression on tip percentages.
+  - Previous analyses revealed weak associations between tipping behavior and trip characteristics. K-means clustering was used to uncover latent patterns in the data, providing insights into distinct rider groups and their behaviors during rush and non-rush hours.
 
-- **PCA Visualizations**: 
-  - **Screeplot**: Used to determine the number of principal components to retain.
-  - **Biplot**: Displays the variables that are important to the principal components.
-  - **Barplot**: Shows the contribution of each variable to the principal components.
-  
-- **Principal Component Regression**:
-  - Performed a Principal Component Regression (PCR) using the first two principal components.
-  - Diagnostic plots were generated to assess the quality of the regression.
+- **Methodology**:
+  - The dataset was divided into rush (morning) and non-rush (noon) hours.
+  - K-means clustering was initialized using hierarchical clustering to determine initial cluster centers and performed separately for rush and non-rush hours.
+  - The optimal number of clusters was determined using the Calinski-Harabasz (CH) index and the elbow plot.
+  - Total within-cluster variation and between-cluster variation were calculated to evaluate clustering quality.
+
+- **K-means Clustering Visualizations**:
+  - **K-means Plot**: Displays clusters on a two-dimensional plot using principal components (PC1 and PC2).
+  - **CH Index Plot**: Identifies the optimal number of clusters based on the CH index.
+  - **PC Loadings Barplot**: Highlights the contribution of each variable to the principal components.
 
 ---
 
-## 2. **Canonical Correlation Analysis (CCA)**
+## 2. **Model-Based Clustering**
 - **Motivation**:
-  - After exploring tipping behavior, CCA was applied to closely examine the relationships between ride characteristics and weather conditions.
+  - After conducting K-means clustering, model-based clustering was applied to compare the two methods and evaluate which approach produces better-defined clusters.
 
 - **Methodology**:
-  - Seven weather variables (temperature, dew point, wind speed, humidity, precipitation, wind direction, air pressure) and five trip characteristics (trip duration, trip distance, base passenger fare, tolls, tip percentage) were examined to determine if weather conditions significantly influence trip characteristics.
+  - The data distribution was analyzed to ensure model-based clustering was appropriate.
+  - Model-based clustering was performed, and the optimal number of clusters was identified.
+  - Total within-cluster variation and between-cluster variation were calculated for comparison with K-means clustering.
 
-- **Correlation Matrix**: 
-  - Visualized the canonical correlation matrix to examine relationships between weather variables and trip characteristics.
-  - Analyzed the cross-correlation between weather conditions and trip characteristics.
-    
-- **Visualizing Canonical Covariates**:
-  - Performed correlation test to see how many canonical covariate pairs were necassary to visualize
-  - Identified which variables contributed the most to the first two canonical pairs
-    
+- **Model-Based Visualizations**:
+  - **Model-Based Plot**: Displays clusters on a two-dimensional plot using principal components (PC1 and PC2).
+  - **CH Index Plot**: Identifies the optimal number of clusters based on the CH index.
 
-- **Canonical Correlation Structure**:
-  - Calculated the canonical correlations in order to visualize
-  - Visualized the overall structure of the canonical correlation to understand how much summary of weather variables and trip characterstics are related.
+- **Comparing K-means and Model-Based Clustering**:
+  - The total within-cluster variation and between-cluster variation were compared between K-means and model-based clustering.
+  - The clustering method that minimized within-cluster variation and maximized between-cluster variation was selected for inference.
 
 ---
 
-## 3. **Maps for Pickup and Drop-off Locations**
-- **Motivation**:
-  - Hexbin maps were used to visualize the spatial distribution of pickup and drop-off locations across New York City at different times of the day (morning, noon, evening).
-  - Hexbin maps were chosen specifically for their ability to declutter dense spatial data and reveal meaningful geographic patterns. 
+## **3. Inference**
 
-- **Methodology**:
-  - Initially, points were plotted on the NYC map and distinguished by color for different times.
-  - However, hexbin plots were plotted next because they effectively manage dense spatial data by aggregating ride data into hexagonal bins.
-    - This approach makes it easier to identify geographic hotspots and observe patterns in ride demand.
-  - The lighter the color of the hexbin, the more popular the pickup/dropoff location is at the time of day
-  
-- **Hexbin Map of Pickup and Drop off Locations**: 
-  - Created separate hexbin maps for morning, noon, and evening to observe the temporal and spatial variations in ride activity.
-  - Interpreted the patterns to identify where ride demand is concentrated throughout the day.
- 
-  
+- **Motivation**:
+  - The clustering results were analyzed using inference to gain insights into rider behavior, tipping habits, trip characteristics, and the influence of external factors such as weather and time of day. 
+
+- **MANOVA Analysis**:
+  - Separate MANOVA tests were performed for rush-hour and non-rush-hour clusters to evaluate differences across five key variables: **IsRaining**, **Temperature**, **Trip Duration**, **Trip Distance**, and **Tip Percentage**.
+  - Significant variables identified through MANOVA were further analyzed using one-way ANOVA tests to pinpoint specific areas of divergence between clusters.
+
+- **Post-Hoc Analysis**:
+  - For rush-hour clusters, **Bonferroni correction** was applied to compare differences between clusters for significant variables identified in the ANOVA.
+  - For non-rush-hour clusters, a **paired t-test** was used to assess differences between the two clusters based on significant variables.
