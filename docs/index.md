@@ -6,17 +6,16 @@ layout: default # This tells Jekyll to use the default layout (from the theme)
 # Exploring 2023 NYC Taxi Ride Patterns
 
 ## **Project Overview**
-Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have become an integral part of urban transportation in cities like New York. With unpredictable weather patterns in the city, there is interest in understanding how external factors like weather conditions influence ride-hailing demand. The motivation for this project is to better understand the FHV ride patterns and how weather might affect commuters who take those means of transportation based on time of day and location. 
+Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have become an integral part of urban transportation in large cities such as New York. With the city's unpredictable weather patterns, there is growing interest in understanding how external factors, such as weather conditions, influence ride-hailing demand. In a previous analysis of the [2023 NYC Taxi Dataset] (https://weij5678.github.io/NYC-Taxi/), it was found that tipping percentage had a weak association with trip characteristics, while trip characteristics showed little to no association with weather conditions, as revealed through PCA and canonical correlation analysis. Building on these findings, the motivation for this final project is to further explore this dataset to examine FHV ride patterns and analyze how weather conditions may affect commuters based on the time of day.
 
 - **Dataset**: [NYC FHV Trip Data](https://data.cityofnewyork.us/Transportation/2023-High-Volume-FHV-Trip-Data/u253-aew4/about_data)
-- **Tools Used**: R, Python 
-- **Statistical Methods**: Hiarchical Clustering and Confirmatory Analysis
+- **Tools Used**: R 
+- **Statistical Methods**: Hiearchical Clustering and Confirmatory Analysis
 
 
 ### **Key Research Questions**:
-- How are weather conditions (e.g., temperature, precipitation, wind) associated with the demand for FHV services in New York City?
-- Are there specific zones or regions in the city where the impact of weather on demand is more pronounced?
-- How does ride-hailing patterns change across different times of the day under varying weather conditions?
+- How does tipping behavior, trip characteristics, and weather differ during rush hour(morning) compared to non-rush hour(noon)?
+- Can we identify distinct groups/cluster of riders based on their tipping habits and trip patterns/weather?
 
 
 ## **Navigation**
@@ -29,10 +28,9 @@ Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have becom
 
 ## **Key Findings**
 
-- Longer trips with higher fares are contributors to FHV ride pattern behavior, while weather and traffic conditions also influence ride demand, although to a lesser degree.
-- There was a weak negative association between tipping and ride characterstics including trip duration, distance traveled, etc.
-- CCA uncovered a weak relationship between weather conditions and trip characteristics
-
+- 
+- 
+- 
 
 ## **Visualizations**
 
