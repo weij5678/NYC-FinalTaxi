@@ -14,16 +14,19 @@ In this section, we present the key results from K-means clustering, Model-Based
 
 - 
 ### a. ** Rush Hour K-means Clusters**
-The K-means Clustering Method produced three clusters shown below:
+This plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, 3) are color-coded as red, green, and blue, respectively. 
 
 
 <img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
 
 - **Interpretation**:
-  - The scree plot shows that the first principal component accounts for 37.1% of the variance, while the second accounts for 11%.
-  - Based on the "elbow" in the plot and taking the variance explained into consideration, only the first two principal components need to be kept when performing principal component regression.
+  - Cluster 3 (blue) is positioned on the negative side of PC1, indicating higher trip characteristics (e.g., longer trips, higher charges, and more tolls).
+  - Cluster 2 (green) is positioned on the positive side of PC1, meaning this cluster has lower trip characteristics (e.g., shorter trips, lower charges, and likely fewer tolls).
+  - Overall, the clusters are well-separated along PC1, emphasizing the importance of trip characteristics in defining rider groups.
+  - PC2 contributes less to the separation, suggesting that secondary factors like tipping behavior or weather are less distinct across clusters.
 
+<img src="images/MorningBarplot.png" alt="drawing" width="600"/>
 
 ### b. **Non Rush Hour K-means Clusters**
 - After selecting the first two principal components, the next step is to identify which variables play a significant role in these components.
