@@ -138,8 +138,7 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 ---
 
 ## 3. **Inference**
-- Initially, pickup/dropoff locations were plotted based off of longitute and latitudee as points on google maps, but it was quite hard to discern the patterns.
-- Instead, hexbin plots were utilized instead in order to observe the pickup/dropoff count on top of NYC's map to osberve any patterns.
+- The clustering results were analyzed using inference to gain insights into rider behavior, tipping habits, trip characteristics, and the influence of external factors such as weather and time of day.
 
 ### a. **Pickup Location Observations**
 
