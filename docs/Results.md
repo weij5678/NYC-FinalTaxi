@@ -5,15 +5,15 @@ layout: default
 
 # Results and Visualizations
 
-In this section, we present the key results from the dimension reduction analysis and visualizations to understand the factors influencing tipping and FHV ride trends.
+In this section, we present the key results from K-means clustering, Model-Based Clustering, and Inference to understand the factors influencing tipping and FHV ride trends.
 
 ---
-## 1. **Principal Component Analysis (PCA)**
-- Initially, three separate principal component analyses were conducted for different times of the day—morning, noon, and evening—excluding tipping variables.
-- Since no significant differences were observed across the time periods, a combined principal component analysis was performed without considering time, while still excluding the tipping variables.
-- This allowed for the regression of tips against the important principal components identified, leading to the following observations.
+## 1. **K-means Clustering**
+- Analyzed the clustering based on time period: Rush hour (Morning) vs Non-Rush hour (noon)
+- Performed K-means by initializng using hiearhcical clustering.
 
-### a. **Key Principal Components**
+- 
+### a. ** Rush Hour K-means Clusters**
 To identify the most important principal components, a scree plot was first generated.
 
 - **Visualization**:
@@ -27,7 +27,7 @@ To identify the most important principal components, a scree plot was first gene
   - Based on the "elbow" in the plot and taking the variance explained into consideration, only the first two principal components need to be kept when performing principal component regression.
 
 
-### b. **Analyzing the Variables within the Principal Components**
+### b. **Non Rush Hour K-means Clusters**
 - After selecting the first two principal components, the next step is to identify which variables play a significant role in these components.
 - This can be examined through a biplot and bar plot, which highlight the contribution of each variable to the first two principal components.
 
