@@ -212,7 +212,7 @@ Bonferroni-corrected pairwise comparisons were conducted for rush hour clusters 
 
 <img src="images/NoonANOVA.png" alt="Tip Percentage and Trip Duration by Cluster" width="600"/>
 
-<img src="images/MorningANOVA1.png" alt="Temperature and Black Car Fee by Cluster" width="600"/>
+<img src="images/NoonANOVA1.png" alt="Temperature and Black Car Fee by Cluster" width="600"/>
 
 - **Cluster 1 (Red)**:
   - Characterized by **premium trips**, with the **highest tip percentages**, **longest trip durations**, and **highest black car fees**. These trips likely represent high-value, long-distance rides.
