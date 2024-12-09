@@ -13,7 +13,6 @@ This section presents the key results from K-means clustering, Model-Based Clust
 - Clustering analysis was conducted separately for two time periods: Rush hour (Morning) and Non-Rush hour (Noon).
 - K-means clustering was initialized using hierarchical clustering to determine starting cluster centers.
 
----
 
 ### a. **Rush Hour (Morning) K-means Clusters**:
 The plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
@@ -28,7 +27,6 @@ The plot below visualizes the K-means clustering (k = 3) results for the morning
   - **Cluster 1 (red)** lies in between, capturing trips with moderate trip characteristics.
   - PC1 drives most of the separation, highlighting the importance of trip-related factors, while PC2 contributes less to differentiation, capturing secondary factors like tipping behavior or weather.
 
----
 
 - **Morning PC Loadings Plot**:
 
@@ -40,7 +38,6 @@ The plot below visualizes the K-means clustering (k = 3) results for the morning
     - **Trip Distance**, **Trip Duration**, **Base Passenger Fare**, **Tolls**, and **Sales Tax**, indicating longer, more expensive trips drive the clustering.
   - These variables strongly influence Cluster 3 (blue), which represents premium trips.
 
----
 
 - **Determining Optimal Clusters**:
 
@@ -51,7 +48,6 @@ The plot below visualizes the K-means clustering (k = 3) results for the morning
   - The **elbow plot** also suggests the optimal number of clusters lies between **k = 2 and k = 3**.
   - Based on visualizations and interpretability of the clustering results, **k = 3** was chosen to better differentiate distinct rider behaviors during rush hour.
 
----
 
 ### b. **Non-Rush Hour (Noon) K-means Clusters**
 The plot below visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). The clusters (1 and 2) are color-coded as red and blue, respectively.
@@ -65,7 +61,6 @@ The plot below visualizes the K-means clustering (k = 2) results for the noon da
   - **Cluster 2 (blue)** is positioned on the **positive side of PC1**, capturing trips with **lower trip characteristics**, such as shorter distances and lower costs.
   - The separation between clusters is primarily driven by PC1, reflecting differences in trip-related variables.
 
----
 
 - **Determining Optimal Clusters**:
 
