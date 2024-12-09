@@ -139,7 +139,7 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 
 #### **MANOVA Inference**
 - The MANOVA test was conducted to examine differences across clusters for the following variables:
-  - **IsRaining**, **Tip Percentage**, **Trip Miles**, **Trip Time**, **Temperature**, and **Black Car Fee**.
+  - **IsRaining**, **Tip Percentage**, **Trip Miles**, **Trip Time**, **Temperature**, **IsRaining** ,and **Black Car Fee**.
   - These specific variables were chosen to determine whether trip characteristics and weather variables vary across clusters. Additionally, since only the first principal component had a distinct loading while other components contributed minimally, we excluded principal components from this analysis.
 - The test yielded a p-value of **<2.2e-16**, which is much smaller than the 5% significance level. Thus, we reject the null hypothesis, indicating that these variables differ significantly across the clusters.
 - To further investigate, one-way inference was conducted to identify which variables significantly differ across clusters.
@@ -181,12 +181,48 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 
 
 #### **Bonferroni**
-- Pairwise comparisons using Bonferroni correction were performed for rush hour clusters to identify significant differences:
-  - **Cluster 3 vs. Cluster 2**: Significant difference in tip percentage and trip characteristics, with Cluster 3 tipping more.
-  - **Cluster 3 vs. Cluster 1**: Significant difference, with Cluster 3 tipping more.
-  - **Cluster 1 vs. Cluster 2**: Moderate difference, showing Cluster 1 tips more than Cluster 2.
+- Pairwise comparisons using Bonferroni correction were performed for rush hour clusters to confirm our observations from the boxplots above and identify significant differences on these variables:
+  - **Temperature**:
+    - Cluster 2 has the lowest mean temperature, significantly lower than both Clusters 1 and 3.
+    - Cluster 3 and Cluster 1 have similar mean temperatures, with no significant difference between them.
+    - This suggests that temperature differences are primarily driven by the difference between Cluster 2 and the other clusters.
+      
+  - **Tip Percentage**:
+    - Cluster 3 has the highest tip percentage mean, compared to the other two clusters
+    - Cluster 1 practically has no tipping involved, tied to shorter trips and regular trips with no extra fees.
+  
+  - **Trip Distance/Duration**:
+    - Cluster 3 Has the highest mean trip distance, significantly higher than both Cluster 1 and Cluster 2. Represents long distance/duration trips, often associated with premium services.
+    - Cluster 2 the lowest mean trip distance/duration, significantly lower than both Cluster 1 and Cluster 3. Likely represents short, budget-friendly trips.
 
----
+  - **Black Car Fee**:
+    - Cluster 3 the highest mean Black Car Fee, significantly higher than both Cluster 1 and Cluster 2.
+    - Cluster 2 the lowest mean Black Car Fee, significantly lower than both Cluster 1 and Cluster 3, perhaps representative of trips with no additional fees.
+      
+  - **Is Raining or Not**:
+    - Cluster 1 has the highest proportion of trips occurring during rain, significantly higher than both Cluster 2 and Cluster 3.
+    - Cluster 3 has the lowest proportion of trips occurring during rain, significantly lower than Cluster 1 but not significantly different from Cluster 2.
+    - Cluster 2 falls in between Clusters 1 and 3, with a lower proportion of trips during rain than Cluster 1 but not significantly different from Cluster 3.
+
+### **Bonferroni Pairwise Comparisons**
+
+Bonferroni-corrected pairwise comparisons were conducted for rush hour clusters to validate insights from the boxplots and identify significant differences across key variables. Below are the findings:
+
+- **Temperature**:
+  - Significant differences were observed in mean temperature across clusters. Cluster 2 had the lowest mean temperature, suggesting that trips in this cluster are more common during colder conditions. In contrast, Clusters 1 and 3 exhibited similar mean temperatures, indicating that temperature differences are primarily driven by the distinction between Cluster 2 and the other clusters.
+
+- **Tip Percentage**:
+  - Tip percentage showed notable differences between all clusters. Cluster 3 had the highest mean tip percentage, reflecting generous tipping behavior often associated with longer, premium trips. Meanwhile, Cluster 1 exhibited minimal tipping behavior, corresponding to shorter, regular trips without additional fees. Cluster 2 fell between these two extremes, with generally low tipping behavior.
+
+- **Trip Distance and Duration**:
+  - Trip distance and duration followed a clear pattern. Cluster 3 represented the longest trips, significantly longer than both Cluster 1 and Cluster 2, aligning with its association with premium services. Cluster 2 had the shortest trips, highlighting its focus on cost-efficient, short-distance travel. Cluster 1 featured moderate trip distances and durations, reflecting a mix of travel patterns.
+
+- **Black Car Fee**:
+  - Black Car Fees differed significantly across clusters. Cluster 3 had the highest mean Black Car Fee, indicative of premium services or additional charges. Cluster 2, in contrast, showed the lowest mean Black Car Fee, characteristic of budget-conscious trips. Cluster 1 fell in the middle, with moderate fees representing a blend of regular and premium trips.
+
+- **Rain (Is Raining)**:
+  - Rainy conditions played a role in clustering. Cluster 1 had the highest proportion of trips during rain, indicating it is most associated with weather-affected riders. Cluster 3 had the lowest proportion of trips during rain, suggesting that these trips are less influenced by inclement weather. Cluster 2 fell between the other clusters, with a lower proportion of trips during rain than Cluster 1 but not significantly different from Cluster 3.
+
 
 ### b. **Non-Rush Hour Inference**
 
