@@ -140,30 +140,58 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 ## 3. **Inference**
 - The clustering results were analyzed using inference to gain insights into rider behavior, tipping habits, trip characteristics, and the influence of external factors such as weather and time of day.
 
-### a. **Pickup Location Observations**
+### a. **Rush Hour Inference**
 
-- **Visualization**:
+#### **MANOVA Inference**
+- The MANOVA test was conducted to examine the differences across clusters for the following variables:
+  - **IsRaining**, **Tip Percentage**, **Trip Miles**, **Trip Time**, and **Temperature**.
+- The test indicated that these variables differ significantly across the clusters.
 
-<img src="images/PuHexbin.png" alt="drawing" width="2500" height="500"/>
+#### **One-way Inference**
+- ANOVA was conducted to identify the most significant variables across clusters:
+  - **Significant Variables**:
+    - **Tip Percentage**
+    - **Trip Miles**
+    - **Trip Duration**
 
-- **Interpretation**:
-  - The hexbin pickup maps for morning, noon, and evening clearly show how ride-hailing demand shifts throughout the day.
-  - It is unsurprising that the most popular pickup location is around Midtown Manhattan. However, an interesting pattern emerges as the day progresses, with Midtown becoming a less dominant pickup spot.
-    - This suggests that while the morning sees a high concentration of pickups in central Manhattan, potentially related to nightlife or early commuters, the assumption that people would be coming from various parts of the city in the morning doesn't hold as strongly.
-  - Though less noticeable, residential areas such as Brooklyn show a higher concentration of pickups in the morning compared to other times of the day, indicating shifting demand patterns.
-
-  
-
-### b. **Dropoff Location Observations**
-
-- **Visualization**:
-
-<img src="images/DoHexbin.png" alt="drawing" width="2500" height="500"/>
+<img src="images/PuHexbin.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  - In the morning, drop-offs are predominantly concentrated in lower Manhattan, particularly in the Financial District, which aligns with the morning commute as workers head to offices and other commercial hubs.
-  - However, the yellow hexbin in the morning points to the Upper East Side, which is primarily a residential area. This is an intriguing observation, as it suggests that the Upper East Side experiences higher drop-off activity than expected during the morning hours.
-  - Much like the pickup map, it appears that the highly concentrated drop-off locations in lower Manhattan and the Upper East side begin to fade or become less significant as the day progresses.
-  - This could indicate that taxis as a commuting option are less popular later in the day, possibly giving way to other modes of transport or indicating less concentrated work-related travel after the morning rush.
+  - Clusters are significantly different in tipping behavior and trip characteristics:
+    - **Cluster 3**: Has the **highest average tip percentage**, indicating longer, higher-cost trips with more tipping.
+    - **Cluster 1**: Shows moderate tipping behavior and trip characteristics.
+    - **Cluster 2**: Has the **lowest average tip percentage**, with **little to no tipping** observed.
+
+#### **Bonferroni**
+- Pairwise comparisons using Bonferroni correction were performed for rush hour clusters to identify significant differences:
+  - **Cluster 3 vs. Cluster 2**: Significant difference in tip percentage and trip characteristics, with Cluster 3 tipping more.
+  - **Cluster 3 vs. Cluster 1**: Significant difference, with Cluster 3 tipping more.
+  - **Cluster 1 vs. Cluster 2**: Moderate difference, showing Cluster 1 tips more than Cluster 2.
+
+---
+
+### b. **Non-Rush Hour Inference**
+
+#### **Visualization**
+<img src="images/PuHexbin.png" alt="drawing" width="600"/>
+
+#### **MANOVA Inference**
+- The MANOVA test was conducted to examine differences across the two clusters for the following variables:
+  - **IsRaining**, **Tip Percentage**, **Trip Miles**, **Trip Time**, and **Temperature**.
+- The test revealed significant differences across these variables.
+
+#### **One-way Inference**
+- ANOVA results for non-rush hour clusters identified significant variables:
+  - **Tip Percentage**
+  - **Trip Miles**
+  - **Trip Duration**
+
+- **Interpretation**:
+  - **Cluster 1**: Represents trips with higher trip characteristics (e.g., longer distances, higher costs) and higher tip percentages.
+  - **Cluster 2**: Represents shorter, lower-cost trips with minimal tipping behavior.
+
+#### **Bonferroni**
+- No Bonferroni post hoc testing was conducted, as there are only two clusters in the non-rush hour data.
+
 
 ---
