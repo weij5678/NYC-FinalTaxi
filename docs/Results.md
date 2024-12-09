@@ -154,55 +154,21 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
     - **Black Car Fee**
 
 
-##### **Cluster-Specific Observations**
+#### **Cluster-Specific Observations**
 
 <img src="images/MorningANOVA.png" alt="Tip Percentage and Trip Duration by Cluster" width="600"/>
 
 <img src="images/MorningANOVA1.png" alt="Temperature and Black Car Fee by Cluster" width="600"/>
 
 - **Cluster 3 (Blue)**:
-  - **Tip Percentage**: This cluster has the **highest average tip percentage** with a wide distribution, indicating significant tipping behavior.
-  - **Trip Duration**: Exhibits the **longest trip durations**, consistent with its association with premium trips and higher tipping percentages.
-  - **Temperature**: Cluster 3 has the **highest temperature range**, suggesting trips in this cluster occur more frequently during warmer conditions.
-  - **Black Car Fee**: This cluster has the **highest black car fees**, aligning with the observation that Cluster 3 represents premium trips or trips with additional charges.
+  - Most likely represents premium trips with the **highest tip percentages**, **longest trip durations**, and highest black car fees. Trips in this cluster are more frequent during **warmer conditions**.
 
 - **Cluster 2 (Green)**:
-  - **Tip Percentage**: This cluster has the **lowest tip percentage**, with many trips showing no tipping behavior.
-  - **Trip Duration**: This cluster shows the **shortest trip durations**, aligning with its low tipping behavior and budget-conscious riders.
-  - **Temperature**: Cluster 2 has the **lowest temperature range**, indicating trips in this cluster occur more frequently during colder conditions.
-  - **Black Car Fee**: Cluster 2 has the **lowest black car fees**, reflecting budget-conscious trips or those without premium services.
+  - Represents budget friendly trips with the **lowest tip percentages**, **shortest trip durations**, and lowest black car fees. Trips are more common in **colder conditions** and often involve no additional fees.
 
 - **Cluster 1 (Red)**:
-  - **Tip Percentage**: This cluster shows **moderate tipping behavior**, with a lower average compared to Cluster 3.
-  - **Trip Duration**: This cluster has **moderate trip durations**, representing average trip lengths during the morning rush.
-  - **Temperature**: Cluster 1 shows **moderate temperature conditions**, reflecting average weather for these trips.
-  - **Black Car Fee**: Black car fees in this cluster are **moderate**, suggesting a mix of regular and premium trips.
+  - Represents average trips with low/moderate tip percentages**, trip durations, and bcf/extra fees. Weather conditions for these trips are average, falling between the extremes of Clusters 2 and 3.
 
-
-
-#### **Bonferroni**
-- Pairwise comparisons using Bonferroni correction were performed for rush hour clusters to confirm our observations from the boxplots above and identify significant differences on these variables:
-  - **Temperature**:
-    - Cluster 2 has the lowest mean temperature, significantly lower than both Clusters 1 and 3.
-    - Cluster 3 and Cluster 1 have similar mean temperatures, with no significant difference between them.
-    - This suggests that temperature differences are primarily driven by the difference between Cluster 2 and the other clusters.
-      
-  - **Tip Percentage**:
-    - Cluster 3 has the highest tip percentage mean, compared to the other two clusters
-    - Cluster 1 practically has no tipping involved, tied to shorter trips and regular trips with no extra fees.
-  
-  - **Trip Distance/Duration**:
-    - Cluster 3 Has the highest mean trip distance, significantly higher than both Cluster 1 and Cluster 2. Represents long distance/duration trips, often associated with premium services.
-    - Cluster 2 the lowest mean trip distance/duration, significantly lower than both Cluster 1 and Cluster 3. Likely represents short, budget-friendly trips.
-
-  - **Black Car Fee**:
-    - Cluster 3 the highest mean Black Car Fee, significantly higher than both Cluster 1 and Cluster 2.
-    - Cluster 2 the lowest mean Black Car Fee, significantly lower than both Cluster 1 and Cluster 3, perhaps representative of trips with no additional fees.
-      
-  - **Is Raining or Not**:
-    - Cluster 1 has the highest proportion of trips occurring during rain, significantly higher than both Cluster 2 and Cluster 3.
-    - Cluster 3 has the lowest proportion of trips occurring during rain, significantly lower than Cluster 1 but not significantly different from Cluster 2.
-    - Cluster 2 falls in between Clusters 1 and 3, with a lower proportion of trips during rain than Cluster 1 but not significantly different from Cluster 3.
 
 ### **Bonferroni Pairwise Comparisons**
 
