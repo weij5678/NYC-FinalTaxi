@@ -143,26 +143,47 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 ### a. **Rush Hour Inference**
 
 #### **MANOVA Inference**
-- The MANOVA test was conducted to examine the differences across clusters for the following variables:
-  - **IsRaining**, **Tip Percentage**, **Trip Miles**, **Trip Time**, and **Temperature**.
-  - These specific variables were chosen to find whether trip characterstics and weather variables vary across clusters. In addition, only the first princicpal component had a distinct loading, and the other components don't contribute as much which is why we arent testing the clsuters against prinicpal components.
-- The test showed that the p-value of <2.2e-16 is much smaller than the significance level at 5%, which we reject the null hypothesis. This indicates that these variables differ significantly across the clusters.
-- Naturally, one-way inference is conducted to examine which variables are signficant.
+- The MANOVA test was conducted to examine differences across clusters for the following variables:
+  - **IsRaining**, **Tip Percentage**, **Trip Miles**, **Trip Time**, **Temperature**, and **Black Car Fee**.
+  - These specific variables were chosen to determine whether trip characteristics and weather variables vary across clusters. Additionally, since only the first principal component had a distinct loading while other components contributed minimally, we excluded principal components from this analysis.
+- The test yielded a p-value of **<2.2e-16**, which is much smaller than the 5% significance level. Thus, we reject the null hypothesis, indicating that these variables differ significantly across the clusters.
+- To further investigate, one-way inference was conducted to identify which variables significantly differ across clusters.
+
 
 #### **One-way Inference**
-- ANOVA was conducted to detmerine which variables are signficant across clusters. For rush hour, all five of the variables were signifcant, the top three most signficant are listed below.
+- **ANOVA** was conducted to determine the significant variables across clusters. For rush hour, all six variables were found to be significant, with the top three most significant variables listed below:
   - **Significant Variables**:
     - **Tip Percentage**
     - **Trip Miles**
     - **Trip Duration**
+    - **Black Car Fee**
 
-<img src="images/MorningANOVA.png" alt="drawing" width="600"/>
 
-- **Interpretation**:
-  - Clusters are significantly different in tipping behavior and trip characteristics:
-    - **Cluster 3**: Has the **highest average tip percentage**, indicating longer, higher-cost trips with more tipping.
-    - **Cluster 1**: Shows moderate tipping behavior and trip characteristics.
-    - **Cluster 2**: Has the **lowest average tip percentage**, with **little to no tipping** observed.
+##### **Cluster-Specific Observations**
+
+<img src="images/MorningANOVA.png" alt="Tip Percentage and Trip Duration by Cluster" width="600"/>
+
+<img src="images/MorningANOVA1.png" alt="Temperature and Black Car Fee by Cluster" width="600"/>
+
+- **Cluster 3 (Blue)**:
+  - **Tip Percentage**: This cluster has the **highest average tip percentage** with a wide distribution, indicating significant tipping behavior.
+  - **Trip Duration**: Exhibits the **longest trip durations**, consistent with its association with premium trips and higher tipping percentages.
+  - **Temperature**: Cluster 3 has the **highest temperature range**, suggesting trips in this cluster occur more frequently during warmer conditions.
+  - **Black Car Fee**: This cluster has the **highest black car fees**, aligning with the observation that Cluster 3 represents premium trips or trips with additional charges.
+
+- **Cluster 2 (Green)**:
+  - **Tip Percentage**: This cluster has the **lowest tip percentage**, with many trips showing no tipping behavior.
+  - **Trip Duration**: This cluster shows the **shortest trip durations**, aligning with its low tipping behavior and budget-conscious riders.
+  - **Temperature**: Cluster 2 has the **lowest temperature range**, indicating trips in this cluster occur more frequently during colder conditions.
+  - **Black Car Fee**: Cluster 2 has the **lowest black car fees**, reflecting budget-conscious trips or those without premium services.
+
+- **Cluster 1 (Red)**:
+  - **Tip Percentage**: This cluster shows **moderate tipping behavior**, with a lower average compared to Cluster 3.
+  - **Trip Duration**: This cluster has **moderate trip durations**, representing average trip lengths during the morning rush.
+  - **Temperature**: Cluster 1 shows **moderate temperature conditions**, reflecting average weather for these trips.
+  - **Black Car Fee**: Black car fees in this cluster are **moderate**, suggesting a mix of regular and premium trips.
+
+
 
 #### **Bonferroni**
 - Pairwise comparisons using Bonferroni correction were performed for rush hour clusters to identify significant differences:
