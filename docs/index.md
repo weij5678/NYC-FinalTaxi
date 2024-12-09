@@ -6,11 +6,12 @@ layout: default # This tells Jekyll to use the default layout (from the theme)
 # Exploring 2023 NYC Taxi Ride Patterns
 
 ## **Project Overview**
-Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have become an integral part of urban transportation in large cities such as New York. With the city's unpredictable weather patterns, there is growing interest in understanding how external factors, such as weather conditions, influence ride-hailing demand. In a previous analysis of the [2023 NYC Taxi Dataset](https://weij5678.github.io/NYC-Taxi/), it was found that tipping percentage had a weak association with trip characteristics, while trip characteristics showed little to no association with weather conditions, as revealed through PCA and canonical correlation analysis. Building on these findings, the motivation for this final project is to further explore this dataset to examine FHV ride patterns and analyze how weather conditions may affect commuters based on the time of day.
+Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have become an integral part of urban transportation in large cities such as New York. With the city's unpredictable weather patterns, there is growing interest in understanding how external factors, such as weather conditions, influence ride-hailing demand. In a previous analysis of the 2023 NYC Taxi dataset, it was found that tipping percentage had a weak association with trip characteristics, while trip characteristics showed little to no association with weather conditions, as revealed through PCA and canonical correlation analysis. Building on these findings, the motivation for this final project is to further explore this dataset to examine FHV ride patterns and analyze how weather conditions may affect commuters based on the time of day.
 
 - **Dataset**: [NYC FHV Trip Data](https://data.cityofnewyork.us/Transportation/2023-High-Volume-FHV-Trip-Data/u253-aew4/about_data)
 - **Tools Used**: R, Python
-- **Statistical Methods**: Hiearchical Clustering, MANOVA Inference, One-way ANOVA, Pairwise ANOVA
+- **Previous Project**: [2023 NYC Taxi Project](https://weij5678.github.io/NYC-Taxi/)
+- **Statistical Methods**: K-means Clustering, and Model-Based Clustering, MANOVA Inference, Bonferroni Correct ANOVA
 
 
 ### **Key Research Questions**:
@@ -28,9 +29,11 @@ Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have becom
 
 ## **Key Findings**
 
-- 
-- 
-- 
+- During rush hour (morning), premium trips (longer duration, higher costs) were associated with generous tipping, while budget-friendly, shorter trips exhibited minimal tipping. During non-rush hour (noon), tipping behavior followed a simpler pattern, with premium trips having higher tips and low-cost trips showing little to no tipping.
+- Weather conditions (e.g., temperature and rain) influenced rider behavior more during rush hour, with colder conditions linked to budget-conscious trips and warmer conditions associated with premium rides. In non-rush hour, weather played an insignificant role in differentiating rider behavior.
+- From K-means Clustering:
+  - Morning (Rush Hour): Three clusters capturing premium, budget, and average trip characteristics.
+  - Noon (Non-Rush Hour): Two clusters distinguishing premium versus budget-friendly trips, with simpler segmentation compared to morning data.
 
 ## **Visualizations**
 
