@@ -3,54 +3,86 @@ layout: default   # This tells Jekyll to use the default layout (from the theme)
 title: "Conclusion" # Title of the page
 ---
 
-# Conclusion
+# Conclusions
 
-## **Key Findings**:
-
-The analysis of FHV ride pattern data through dimensionality reduction techniques and spatial visualizations reveals insights into tipping behavior, ride characteristics, weather conditions, and demand patterns across New York City. Here are the key conclusions:
-
-### 1. **Principal Component Analysis (PCA)**
-
-The PCA revealed that the first two principal components capture a significant portion of the variability in ride-hailing data. The key factors driving the first principal component are trip-related variables such as **trip distances**, **duration**, and **base fare**, while the second principal component is driven by external factors like **wind speed**, **congestion surcharge**, and **tolls charged**. These findings suggest that longer trips with higher fares are major contributors to ride-hailing behavior, while weather and traffic conditions also influence ride demand, although to a lesser degree.
-
-### 2. **Tipping Behavior**
-
-The Principal Component Regression model, which regressed tipping behavior on the first two principal components, uncovered a weak negative association between tipping and ride characteristics. While trip duration and distance influence tips, the diagnostic plots indicated issues with non-linearity and heteroscedasticity. Future studies could improve the regression model by exploring transformations or non-linear models to better capture the relationship between tipping and these underlying factors.
-
-### 3. **Canonical Correlation Analysis (CCA)**
-
-The CCA uncovered a weak relationship between weather conditions and trip characteristics. Despite the weak correlations, some interesting associations were found: **dew point** and **humidity** were weakly related to longer trip durations and higher base fares. However, overall, the analysis shows that weather factors like **temperature**, **wind speed**, and **air pressure** have limited influence on trip characteristics and tipping behavior. This suggests that other factors, such as time of day or location, may play a more significant role in ride demand.
-
-### 4. **Spatial Distribution of Ride Demand**
-
-Hexbin maps revealed shifting patterns of ride-hailing demand across New York City throughout the day. Midtown Manhattan emerged as the primary hotspot for pickups in the morning, but as the day progressed, this demand faded, indicating a decline in ride activity in the area. Meanwhile, residential areas like **Brooklyn** showed a higher concentration of pickups in the morning, reflecting commuting patterns. Interestingly, the **Upper East Side**, traditionally a residential area, showed an unexpected concentration of drop-offs in the morning, suggesting more complex ride behavior patterns, perhaps related to daily commuting or other factors.
-
---- 
-
-## **Limitations**
-
-While the analysis provided valuable insights, there are several limitations to consider:
-
-1. **Lack of Taxi Zone Data Usage**: The analysis would have benefitted from incorporating **taxi zone data** into the hexbin mapping plots, which would have allowed for a more granular understanding of ride patterns across specific zones in New York City. This could have improved the spatial accuracy of the pickup and drop-off patterns.
-  
-2. **Granularity of Weather Data**: The weather data used in this study may lack the level of granularity required to capture the impact of weather on ride behavior. More  cohesive weather data could have provided deeper insights into how conditions such as snow and seasonality influence demand.
-
-3. **Complexity of Variables**: The large number of variables in the dataset made it difficult to discern a clear, continuous trend. While PCA helped reduce dimensionality, there remains a degree of complexity that could be addressed by focusing on a smaller set of key variables or by applying advanced methods such as feature selection.
+This project explored the patterns of tipping behavior and FHV ride characteristics in New York City during rush and non-rush hours, using clustering techniques and statistical inference to identify key differences.
 
 ---
 
-## **Recommendations for Future Research**
+## Key Findings
 
-The analysis has provided valuable insights into ride-hailing behavior in New York City, but there are several areas that warrant further exploration:
+### 1. **Rush Hour (Morning)**
 
-1. **Improving Regression Models**: Future work could explore non-linear models or transformations to better capture the complex relationship between tipping and trip characteristics.
-  
-2. **Weather Data Integration**: While this study found weak correlations between weather and ride behavior, future studies could include more granular weather data or explore its interaction with other factors, such as time of day or specific locations.
+- **Clustering Results**:
+  - K-means clustering (k = 3) revealed distinct groups based on trip characteristics:
+    - **Cluster 3** represents premium trips with the highest tip percentages, longest trip durations, and highest black car fees.
+    - **Cluster 2** reflects budget-friendly trips with the lowest tip percentages, shortest durations, and minimal black car fees.
+    - **Cluster 1** represents moderate trips, balancing characteristics of the other two clusters.
 
-3. **Further Exploration of Spatial Patterns**: Additional spatial analyses could focus on more specifc neighborhoods to uncover nuanced patterns in ride demand across different parts of New York City, including areas beyond Manhattan.
+- **Statistical Inference**:
+  - The MANOVA test showed significant differences across clusters for all variables tested (**Tip Percentage**, **Trip Miles**, **Trip Duration**, **Black Car Fee**, **Temperature**, and **IsRaining**).
+  - One-way ANOVA highlighted **Tip Percentage**, **Trip Miles**, **Trip Duration**, and **Black Car Fee** as the most significant differentiators.
+  - Bonferroni corrections confirmed Cluster 3's association with high-value, premium rides, while Cluster 2's characteristics aligned with short, cost-effective trips.
 
-4.  **Rider Behavior and Economic Variables**:  
-  Incorporating economic variables such as tips, driver pay, and fare surcharges could provide additional insights into rider behavior. Understanding how tipping interacts with fare and weather could inform driver compensation models and help improve driver satisfaction by identifying patterns where higher tips are more likely.
+---
+
+### 2. **Non-Rush Hour (Noon)**
+
+- **Clustering Results**:
+  - K-means clustering (k = 2) revealed two distinct clusters:
+    - **Cluster 1** represents premium trips with higher tip percentages, longer durations, and higher black car fees.
+    - **Cluster 2** captures budget-friendly trips with lower tip percentages, shorter durations, and minimal black car fees.
+
+- **Statistical Inference**:
+  - MANOVA confirmed significant differences across clusters for trip-related variables, but **weather variables (Temperature and IsRaining)** were not significant.
+  - One-way ANOVA identified **Tip Percentage**, **Trip Miles**, **Trip Duration**, and **Black Car Fee** as key variables distinguishing the clusters.
+  - Bonferroni corrections validated the findings, reinforcing the segmentation of premium and budget trips during non-rush hours.
+
+---
+
+## Comparison of Clustering Methods
+
+- **K-means Clustering**:
+  - Produced more distinct clusters with minimized within-cluster variation and maximized between-cluster variation for both rush and non-rush hour data.
+  - Better aligned with interpretable rider and trip characteristics.
+
+- **Model-Based Clustering**:
+  - Generated less distinct clusters with significant overlap, particularly for non-rush hour data.
+  - Was less effective in capturing clear behavioral differences across clusters.
+
+---
+
+## Limitations
+
+- **Data Constraints**:
+  - This analysis relied solely on the provided dataset, which lacked information on external factors such as rider demographics, income levels, or dynamic pricing strategies.
+  - The dataset may not capture rare or extreme weather events, limiting insights into how severe conditions affect rider behavior.
+
+- **Temporal Limitations**:
+  - The analysis focused only on morning and noon periods, potentially overlooking unique patterns during evening or late-night hours.
+
+- **Clustering Assumptions**:
+  - K-means clustering assumes spherical clusters and equal variances, which may not fully capture the complexity of ride-hailing data. Model-based clustering, while more flexible, produced less interpretable clusters in this context.
+
+---
+
+## Recommendations for Future Work
+
+- **Expand Temporal Analysis**:
+  - Include additional time periods, such as evening and late-night rides, to explore whether similar patterns emerge across other parts of the day.
+
+- **Incorporate External Factors**:
+  - Enrich the dataset with rider demographics, traffic conditions, and dynamic pricing data to better understand factors influencing tipping behavior and trip patterns.
+
+- **Extreme Weather Events**:
+  - Analyze how rare weather events (e.g., heavy snow, severe storms) influence ride-hailing demand, trip characteristics, and tipping behavior.
+
+- **Advanced Clustering Techniques**:
+  - Experiment with alternative clustering methods such as DBSCAN or hierarchical clustering for non-spherical clusters.
+  - Use ensemble clustering methods to combine the strengths of different approaches.
+
+- **Dynamic Pricing Analysis**:
+  - Study the impact of surge pricing on tipping behavior and cluster characteristics to inform pricing strategies.
 
 ---
 
