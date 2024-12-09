@@ -3,42 +3,7 @@ layout: default   # This tells Jekyll to use the default layout (from the theme)
 title: "Conclusion" # Title of the page
 ---
 
-# Conclusions
-
-This project explored the patterns of tipping behavior and FHV ride characteristics in New York City during rush and non-rush hours, using clustering techniques and statistical inference to identify key differences.
-
----
-
-## Key Findings
-
-### 1. **Rush Hour (Morning)**
-
-- **Clustering Results**:
-  - K-means clustering (k = 3) revealed distinct groups based on trip characteristics:
-    - **Cluster 3** represents premium trips with the highest tip percentages, longest trip durations, and highest black car fees.
-    - **Cluster 2** reflects budget-friendly trips with the lowest tip percentages, shortest durations, and minimal black car fees.
-    - **Cluster 1** represents moderate trips, balancing characteristics of the other two clusters.
-
-- **Statistical Inference**:
-  - The MANOVA test showed significant differences across clusters for all variables tested (**Tip Percentage**, **Trip Miles**, **Trip Duration**, **Black Car Fee**, **Temperature**, and **IsRaining**).
-  - One-way ANOVA highlighted **Tip Percentage**, **Trip Miles**, **Trip Duration**, and **Black Car Fee** as the most significant differentiators.
-  - Bonferroni corrections confirmed Cluster 3's association with high-value, premium rides, while Cluster 2's characteristics aligned with short, cost-effective trips.
-
----
-
-### 2. **Non-Rush Hour (Noon)**
-
-- **Clustering Results**:
-  - K-means clustering (k = 2) revealed two distinct clusters:
-    - **Cluster 1** represents premium trips with higher tip percentages, longer durations, and higher black car fees.
-    - **Cluster 2** captures budget-friendly trips with lower tip percentages, shorter durations, and minimal black car fees.
-
-- **Statistical Inference**:
-  - MANOVA confirmed significant differences across clusters for trip-related variables, but **weather variables (Temperature and IsRaining)** were not significant.
-  - One-way ANOVA identified **Tip Percentage**, **Trip Miles**, **Trip Duration**, and **Black Car Fee** as key variables distinguishing the clusters.
-  - Bonferroni corrections validated the findings, reinforcing the segmentation of premium and budget trips during non-rush hours.
-
----
+# Conclusion
 
 ## Comparison of Clustering Methods
 
@@ -52,6 +17,36 @@ This project explored the patterns of tipping behavior and FHV ride characterist
 
 ---
 
+## Morning: Rush Hour
+
+During rush hour, the analysis revealed more diversity in trip patterns and tipping behaviors, driven by trip-related variables such as distance, duration, and additional charges (e.g., black car fees and tolls). This variability was captured effectively by **K-means clustering**, which identified three distinct clusters that reflect different types of riders and trips.
+
+Cluster 3 represents riders engaging in premium trips, characterized by **longer durations, higher costs, and higher tip percentages**. These trips are often associated with **warmer weather** and include additional charges, such as black car fees and tolls. Riders in this cluster are more likely to tip generously, aligning with the high-value nature of these rides.
+
+Cluster 2, on the other hand, encompasses budget-conscious riders who rarely tip. Trips in this cluster are **shorter, less costly, and occur more frequently in colder weather**. The minimal additional charges and low black car fees further suggest that these rides cater to routine, economical transportation needs.
+
+Cluster 1 serves as a middle ground, capturing trips with **moderate duration, cost, and tipping behavior**. These rides are reflective of average commuter behavior during rush hour, where the mix of regular and premium trips results in less extreme patterns compared to the other clusters.
+
+The morning clustering results highlight the importance of trip-related variables (as captured by PC1), underscoring how rider behavior and tipping habits are influenced by the length and cost of trips, as well as external factors like weather.
+
+---
+
+## Noon: Non-Rush Hour
+
+The non-rush hour analysis revealed less diversity in trip patterns and tipping behaviors compared to rush hour. The data during this period showed a reduction in the number of clusters, with **two primary clusters identified** by **K-means clustering**. These clusters primarily reflect differences in trip-related variables such as distance, duration, and additional fees, but weather variables played a less significant role.
+
+Cluster 1 represents riders engaging in **longer, more premium trips**, with higher black car fees and **more generous tipping behavior**. These trips are more likely to be associated with riders willing to pay for additional services or traveling longer distances during non-rush hours, where competition for rides is lower.
+
+Cluster 2 reflects **short, low-cost trips** dominated by budget-conscious riders or those engaging in routine, economical transportation. The **minimal tipping behavior** and lack of significant additional fees in this cluster suggest a focus on cost-efficiency during non-rush hours.
+
+Unlike the morning clusters, which were influenced by weather conditions, the non-rush hour clusters showed no significant differences in weather-related variables such as temperature or rain. This may indicate that, during non-peak hours, rider behavior is less affected by external factors and more influenced by the nature and purpose of the trip itself.
+
+---
+
+By comparing rush and non-rush hour periods, the findings illustrate how rider behavior and tipping patterns evolve throughout the day. Rush hour trips display greater complexity, likely due to a mix of commuter and discretionary travel. Non-rush hour trips, by contrast, exhibit more homogeneity, with a clear distinction between premium and economical travel.
+
+---
+
 ## Limitations
 
 - **Data Constraints**:
@@ -59,10 +54,10 @@ This project explored the patterns of tipping behavior and FHV ride characterist
   - The dataset may not capture rare or extreme weather events, limiting insights into how severe conditions affect rider behavior.
 
 - **Temporal Limitations**:
-  - The analysis focused only on morning and noon periods, potentially overlooking unique patterns during evening or late-night hours.
+  - The analysis focused only on morning and noon periods, potentially overlooking unique patterns during evening or late-night hours. 
 
-- **Clustering Assumptions**:
-  - K-means clustering assumes spherical clusters and equal variances, which may not fully capture the complexity of ride-hailing data. Model-based clustering, while more flexible, produced less interpretable clusters in this context.
+- **Data Scaling**:
+   - Standardized data could make some of the interpretations more complicated and could mask absolute differences in variables .
 
 ---
 
@@ -77,17 +72,13 @@ This project explored the patterns of tipping behavior and FHV ride characterist
 - **Extreme Weather Events**:
   - Analyze how rare weather events (e.g., heavy snow, severe storms) influence ride-hailing demand, trip characteristics, and tipping behavior.
 
-- **Advanced Clustering Techniques**:
-  - Experiment with alternative clustering methods such as DBSCAN or hierarchical clustering for non-spherical clusters.
-  - Use ensemble clustering methods to combine the strengths of different approaches.
-
 - **Dynamic Pricing Analysis**:
-  - Study the impact of surge pricing on tipping behavior and cluster characteristics to inform pricing strategies.
+  - Would be interesting to study the impact of surge pricing on tipping behavior and cluster characteristics to inform pricing strategies.
 
 ---
 
 ## **Final Thoughts**
 
-This analysis offers a detailed exploration of ride pattern and tipping behavior in New York City in 2023. By employing dimensionality reduction techniques and spatial visualization, the study has highlighted the main factors driving ride demand and uncovered patterns related to both geography and timing. 
+This analysis offers a detailed exploration of ride pattern and tipping behavior in New York City in 2023. By employing clustering techniques and inference, the study has highlighted the main factors driving ride demand and uncovered patterns related to both geography and timing. 
 
 **Thank you for exploring this analysis! Feel free to check out the [GitHub repository](https://github.com/weij5678/NYC-FinalTaxi/tree/main) for code, data, and further details.**
