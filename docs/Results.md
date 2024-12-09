@@ -145,16 +145,18 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 #### **MANOVA Inference**
 - The MANOVA test was conducted to examine the differences across clusters for the following variables:
   - **IsRaining**, **Tip Percentage**, **Trip Miles**, **Trip Time**, and **Temperature**.
-- The test indicated that these variables differ significantly across the clusters.
+  - These specific variables were chosen to find whether trip characterstics and weather variables vary across clusters. In addition, only the first princicpal component had a distinct loading, and the other components don't contribute as much which is why we arent testing the clsuters against prinicpal components.
+- The test showed that the p-value of <2.2e-16 is much smaller than the significance level at 5%, which we reject the null hypothesis. This indicates that these variables differ significantly across the clusters.
+- Naturally, one-way inference is conducted to examine which variables are signficant.
 
 #### **One-way Inference**
-- ANOVA was conducted to identify the most significant variables across clusters:
+- ANOVA was conducted to detmerine which variables are signficant across clusters. For rush hour, all five of the variables were signifcant, the top three most signficant are listed below.
   - **Significant Variables**:
     - **Tip Percentage**
     - **Trip Miles**
     - **Trip Duration**
 
-<img src="images/PuHexbin.png" alt="drawing" width="600"/>
+<img src="images/MorningANOVA.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
   - Clusters are significantly different in tipping behavior and trip characteristics:
