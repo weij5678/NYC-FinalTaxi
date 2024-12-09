@@ -55,7 +55,6 @@ Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have becom
 ## **Future Work**
 
 Potential extensions of this analysis include:
-- Improving/transforming the Regression Models
 - Better Weather Data Integration
 - Further Exploration of Spatial Patterns
-- Rider Behavior and Economic Variables
+- Expand Temporal Analysis
