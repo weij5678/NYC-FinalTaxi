@@ -98,3 +98,6 @@ The dataset contains **6,939 observations**, each representing a three minute in
 3. **Meteostat Weather Data**  
    [Meteostat Dataset](https://dev.meteostat.net/)  
    Meteorological data (temperature, wind speed, precipitation, etc.) was retrieved for each trip’s pickup location and time.
+
+---
+[Home](index.md)      [Data](Data.md)         [Methodology](Methodology.md)           [Results](Results.md)          [Conclusion](Conclusion.md)
