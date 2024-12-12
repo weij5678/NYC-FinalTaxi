@@ -74,3 +74,7 @@ By comparing rush and non-rush hour periods, the findings illustrate how rider b
 This analysis offers a detailed exploration of ride pattern and tipping behavior in New York City in 2023. By employing clustering techniques and inference, the study has highlighted the main factors driving ride demand and uncovered patterns related to both geography and timing. 
 
 **Thank you for exploring this analysis! Feel free to check out the [GitHub repository](https://github.com/weij5678/NYC-FinalTaxi/tree/main) for code, data, and further details.**
+
+___
+
+[Home](index.md)      [Data](Data.md)         [Methodology](Methodology.md)           [Results](Results.md)          [Conclusion](Conclusion.md)
