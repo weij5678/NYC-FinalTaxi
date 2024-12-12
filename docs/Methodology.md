@@ -2,7 +2,7 @@
 title: Methodology
 layout: default
 --- 
-[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusion.md)
+[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusions.md)
 
 
 # **Methodology**
@@ -53,11 +53,12 @@ layout: default
   - After conducting K-means clustering, model-based clustering was applied to compare the two methods and evaluate which approach produces better-defined clusters.
 
 - **Methodology**:
-  - The data distribution was analyzed to ensure model-based clustering was appropriate.
+  - The data distribution was analyzed to ensure model-based clustering was appropriate by examining whether the data follows a Gaussian-like distribution and displays multimodal distributions as well.
   - Model-based clustering was performed, and the optimal number of clusters was identified.
   - Total within-cluster variation and between-cluster variation were calculated for comparison with K-means clustering.
 
 - **Model-Based Visualizations**:
+  - **Kernel Density Plots**: Displays the kernel densities of six variables in the dataset.
   - **Model-Based Plot**: Displays clusters on a two-dimensional plot using principal components (PC1 and PC2).
   - **CH Index Plot**: Identifies the optimal number of clusters based on the CH index.
 
