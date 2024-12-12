@@ -2,7 +2,7 @@
 title: Results
 layout: default
 ---
-[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusion.md)
+[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusions.md)
 
 # Results and Visualizations
 
@@ -246,4 +246,4 @@ Bonferroni-corrected pairwise comparisons were conducted to validate the observe
 
 ---
 
-[Back](Methodology.md)     [Next](Conclusion.md)       
+[Back](Methodology.md)     [Next](Conclusions.md)       
