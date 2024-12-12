@@ -2,6 +2,7 @@
 title: Results
 layout: default
 ---
+[Home](index.md)      [Data](Data.md)         [Methodology](Methodology.md)           [Results](Results.md)          [Conclusion](Conclusion.md)
 
 # Results and Visualizations
 
