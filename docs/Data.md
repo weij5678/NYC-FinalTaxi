@@ -2,8 +2,10 @@
 layout: default   # This tells Jekyll to use the default layout (from the theme)
 title: "Data Description" # Title of the page
 ---
+[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusion.md)
 
-# Data Description
+
+# **Data Description**
 
 ## **Dataset Background**
 - This project utilizes high-volume for-hire vehicle (FHV) or taxi trip data in New York City from **October 15, 2023, to November 15, 2023**, focusing on trips that occurred at three specific times:
