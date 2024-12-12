@@ -3,13 +3,14 @@ layout: default   # This tells Jekyll to use the default layout (from the theme)
 title: "Conclusion" # Title of the page
 ---
 [Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusions.md)
+---
 
 # **Conclusion**
 
 ## **Key Findings**:
 The analysis of FHV ride pattern data through clustering techniques and inference reveals insights into tipping behavior and ride characteristics fory rush and non-rush hour throughout NYC. Here are the key conclusions:
 
-### 1. **Comparison of Clustering Methods**
+### **1. Comparison of Clustering Methods**
 
 - **K-means Clustering**:
   - Produced more distinct clusters with minimized within-cluster variation and maximized between-cluster variation for both rush and non-rush hour data.
@@ -20,7 +21,7 @@ The analysis of FHV ride pattern data through clustering techniques and inferenc
   - Was less effective in capturing clear behavioral differences across clusters.
 
 
-### 2. **Morning: Rush Hour**
+### **2. Morning: Rush Hour**
 
 During rush hour, the analysis revealed more diversity in trip patterns and tipping behaviors, driven by trip-related variables such as distance, duration, and additional charges such as black car fees and tolls. This variability was captured effectively by **K-means clustering**, which identified three distinct clusters that reflect different types of riders and trips.
 
@@ -29,7 +30,7 @@ During rush hour, the analysis revealed more diversity in trip patterns and tipp
 The morning clustering results highlight the importance of trip-related variables (as captured by PC1), emphasizing how rider behavior and tipping habits are influenced by the length and cost of trips, as well as external factors like weather.
 
 
-### 3. **Noon: Non-Rush Hour**
+### **3. Noon: Non-Rush Hour**
 
 The non-rush hour analysis revealed less diversity in trip patterns and tipping behaviors compared to rush hour. The data during this period showed a reduction in the number of clusters, with **two primary clusters identified** by **K-means clustering**. These clusters primarily reflect differences in trip-related variables such as distance, duration, and additional fees, but weather variables doesn't have any signficance in this case. **Cluster 1** represents riders engaging in **longer, more premium trips**, with higher black car fees and more generous tipping behavior. These trips are more likely to be associated with riders willing to pay for additional services or traveling longer distances during non-rush hours, where competition for rides is lower. **Cluster 2** reflects **short, low-cost trips** dominated by budget-conscious riders or those engaging in economical transportation. The **minimal tipping behavior** and lack of significant additional fees in this cluster suggest a focus on cost-efficiency during non-rush hours.
 
