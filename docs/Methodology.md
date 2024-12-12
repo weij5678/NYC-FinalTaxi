@@ -32,6 +32,8 @@ layout: default
 | `tip_percentage`        | Percentage of Tip Recieved based on base fare/tip       |
 | `IsRaining`             | Indicates if it is raining or not for that ride         |
 
+---
+
 ## **2. K-means Clustering**
 - **Motivation**:
   - Previous analyses revealed weak associations between tipping behavior and trip characteristics. K-means clustering was used to uncover latent patterns in the data, providing insights into distinct rider groups and their behaviors during rush and non-rush hours.
