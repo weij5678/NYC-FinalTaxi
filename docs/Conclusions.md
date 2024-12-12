@@ -2,8 +2,9 @@
 layout: default   # This tells Jekyll to use the default layout (from the theme)
 title: "Conclusion" # Title of the page
 ---
+[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusion.md)
 
-# Conclusion
+# **Conclusion**
 
 ## **Key Findings**:
 The analysis of FHV ride pattern data through clustering techniques and inference reveals insights into tipping behavior and ride characteristics fory rush and non-rush hour throughout NYC. Here are the key conclusions:
@@ -77,4 +78,4 @@ This analysis offers a detailed exploration of ride pattern and tipping behavior
 
 ___
 
-[Home](index.md)      [Data](Data.md)         [Methodology](Methodology.md)           [Results](Results.md)          [Conclusion](Conclusion.md)
+[Back](Results.md)     
