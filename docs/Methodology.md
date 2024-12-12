@@ -6,9 +6,9 @@ layout: default
 # Methodology
 
 ## 1. **Data Processing**
-- Although the [Data Description](Data.md) already explained how the data was processed, a new variable `IsRaining` was created by collapsing the `WeatherCondition` to make the clustering simpler and easier to interpret.
-- For this analysis sepcifically, the focus is on the two subsets rush hour (morning) and non-rush hour (noon), by subsetting the variable based on the variable `PeriodOfDay`.
-- Below is the specific *16 variables* that is analzed throughout the analysis:
+- Although the [Data Description](Data.md) provides an overview of data preprocessing, additional commentary is warranted to explain what parts of the dataset were utilized for this specific analaysis. A new variable, `IsRaining`, was created by collapsing the `WeatherCondition` variable to an indicator, making it easier to analyze weather's impact and better for clustering analysis.
+- For this analysis, the focus was narrowed to two subsets: **rush hour (morning)** and **non-rush hour (noon)**. These subsets were created by filtering the dataset based on the `PeriodOfDay` variable.
+- The table below outlines the *16 variables* that were analyzed throughout the study:
 
 | Variable Name          | Variable Label                                           |
 |------------------------|----------------------------------------------------------|
