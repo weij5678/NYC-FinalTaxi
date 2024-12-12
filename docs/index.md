@@ -39,14 +39,16 @@ Ride-hailing services, including For-Hire Vehicles (FHVs) like taxis, have becom
 
 <img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
-<div style="margin-bottom:20px;"></div>
+<br><br>
 
 
 <img src="images/MorningANOVA.png" alt="drawing" width="600"/>
 
+<br><br>
 
 <img src="images/NoonKmeans.png" alt="drawing" width="600"/>
 
+<br><br>
 
 <img src="images/NoonANOVA.png" alt="drawing" width="600"/>
 
