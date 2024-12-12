@@ -2,7 +2,7 @@
 layout: default   # This tells Jekyll to use the default layout (from the theme)
 title: "Data Description" # Title of the page
 ---
-[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusion.md)
+[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusions.md)
 
 
 # **Data Description**
