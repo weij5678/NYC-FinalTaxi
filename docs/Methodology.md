@@ -6,9 +6,9 @@ layout: default
 # Methodology
 
 ## 1. **Data Processing**
-- Although the [Data Description](Data.md) already explained how the data was processed, a new variable `IsRaining` was added to make the clustering possible
-- For this analysis sepcifically, the focus is on the two subsets rush hour (morning) and non-rush hour (noon)
-- Below is the specific 16 variables that is focused on throughout the analysis:
+- Although the [Data Description](Data.md) already explained how the data was processed, a new variable `IsRaining` was created by collapsing the `WeatherCondition` to make the clustering simpler and easier to interpret.
+- For this analysis sepcifically, the focus is on the two subsets rush hour (morning) and non-rush hour (noon), by subsetting the variable based on the variable `PeriodOfDay`.
+- Below is the specific *16 variables* that is analzed throughout the analysis:
 
 | Variable Name          | Variable Label                                           |
 |------------------------|----------------------------------------------------------|
@@ -29,7 +29,7 @@ layout: default
 | `tip_percentage`        | Percentage of Tip Recieved based on base fare/tip       |
 | `IsRaining`             | Indicates if it is raining or not for that ride         |
 
-## 1. **K-means Clustering**
+## 2. **K-means Clustering**
 - **Motivation**:
   - Previous analyses revealed weak associations between tipping behavior and trip characteristics. K-means clustering was used to uncover latent patterns in the data, providing insights into distinct rider groups and their behaviors during rush and non-rush hours.
 
@@ -46,7 +46,7 @@ layout: default
 
 ---
 
-## 2. **Model-Based Clustering**
+## 3. **Model-Based Clustering**
 - **Motivation**:
   - After conducting K-means clustering, model-based clustering was applied to compare the two methods and evaluate which approach produces better-defined clusters.
 
@@ -65,7 +65,7 @@ layout: default
 
 ---
 
-## **3. Inference**
+## **4. Inference**
 
 - **Motivation**:
   - The clustering results were analyzed using inference to gain insights into rider behavior, tipping habits, trip characteristics, and the influence of external factors such as weather and time of day. 
