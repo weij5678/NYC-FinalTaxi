@@ -5,7 +5,10 @@ title: "Conclusion" # Title of the page
 
 # Conclusion
 
-## Comparison of Clustering Methods
+## **Key Findings**:
+
+
+### 1. **Comparison of Clustering Methods**
 
 - **K-means Clustering**:
   - Produced more distinct clusters with minimized within-cluster variation and maximized between-cluster variation for both rush and non-rush hour data.
@@ -15,9 +18,8 @@ title: "Conclusion" # Title of the page
   - Generated less distinct clusters with significant overlap, particularly for non-rush hour data.
   - Was less effective in capturing clear behavioral differences across clusters.
 
----
 
-## Morning: Rush Hour
+### 2. Morning: Rush Hour
 
 During rush hour, the analysis revealed more diversity in trip patterns and tipping behaviors, driven by trip-related variables such as distance, duration, and additional charges (e.g., black car fees and tolls). This variability was captured effectively by **K-means clustering**, which identified three distinct clusters that reflect different types of riders and trips.
 
@@ -29,9 +31,8 @@ Cluster 1 serves as a middle ground, capturing trips with **moderate duration, c
 
 The morning clustering results highlight the importance of trip-related variables (as captured by PC1), underscoring how rider behavior and tipping habits are influenced by the length and cost of trips, as well as external factors like weather.
 
----
 
-## Noon: Non-Rush Hour
+### 3. Noon: Non-Rush Hour
 
 The non-rush hour analysis revealed less diversity in trip patterns and tipping behaviors compared to rush hour. The data during this period showed a reduction in the number of clusters, with **two primary clusters identified** by **K-means clustering**. These clusters primarily reflect differences in trip-related variables such as distance, duration, and additional fees, but weather variables played a less significant role.
 
@@ -41,13 +42,12 @@ Cluster 2 reflects **short, low-cost trips** dominated by budget-conscious rider
 
 Unlike the morning clusters, which were influenced by weather conditions, the non-rush hour clusters showed no significant differences in weather-related variables such as temperature or rain. This may indicate that, during non-peak hours, rider behavior is less affected by external factors and more influenced by the nature and purpose of the trip itself.
 
----
 
 By comparing rush and non-rush hour periods, the findings illustrate how rider behavior and tipping patterns evolve throughout the day. Rush hour trips display greater complexity, likely due to a mix of commuter and discretionary travel. Non-rush hour trips, by contrast, exhibit more homogeneity, with a clear distinction between premium and economical travel.
 
 ---
 
-## Limitations
+## **Limitations**
 
 - **Data Constraints**:
   - This analysis relied solely on the provided dataset, which lacked information on external factors such as rider demographics, income levels, or dynamic pricing strategies.
@@ -61,7 +61,7 @@ By comparing rush and non-rush hour periods, the findings illustrate how rider b
 
 ---
 
-## Recommendations for Future Work
+## **Recommendations for Future Work**
 
 - **Expand Temporal Analysis**:
   - Include additional time periods, such as evening and late-night rides, to explore whether similar patterns emerge across other parts of the day.
