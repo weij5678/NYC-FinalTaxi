@@ -2,8 +2,10 @@
 title: Methodology
 layout: default
 --- 
+[Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusion.md)
 
-# Methodology
+
+# **Methodology**
 
 ## 1. **Data Processing**
 - Although the [Data Description](Data.md) provides an overview of data preprocessing, additional commentary is warranted to explain what parts of the dataset were utilized for this specific analaysis. A new variable, `IsRaining`, was created by collapsing the `WeatherCondition` variable to an indicator, making it easier to analyze weather's impact and better for clustering analysis.
