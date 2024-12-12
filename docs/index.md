@@ -1,5 +1,5 @@
 ---
-title: "Home" # Title of the page
+title: "Multivariate Statistic Final Project" # Title of the page
 layout: default # This tells Jekyll to use the default layout (from the theme)
 ---
 
