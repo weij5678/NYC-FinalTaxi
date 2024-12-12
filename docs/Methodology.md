@@ -77,3 +77,8 @@ layout: default
 - **Post-Hoc Analysis**:
   - For rush-hour clusters, **Bonferroni correction** was applied to compare differences between clusters for significant variables identified in the ANOVA.
   - For non-rush-hour clusters, a **paired t-test** was used to assess differences between the two clusters based on significant variables.
+
+---
+# Next Up
+[Methodology](Methodology.md)
+
