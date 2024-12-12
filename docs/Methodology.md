@@ -7,7 +7,7 @@ layout: default
 
 # **Methodology**
 
-## 1. **Data Processing**
+## **1. Data Processing**
 - Although the [Data Description](Data.md) provides an overview of data preprocessing, additional commentary is warranted to explain what parts of the dataset were utilized for this specific analaysis. A new variable, `IsRaining`, was created by collapsing the `WeatherCondition` variable to an indicator, making it easier to analyze weather's impact and better for clustering analysis.
 - For this analysis, the focus was narrowed to two subsets: **rush hour (morning)** and **non-rush hour (noon)**. These subsets were created by filtering the dataset based on the `PeriodOfDay` variable.
 - The table below outlines the *16 variables* that were analyzed throughout the study:
@@ -31,7 +31,7 @@ layout: default
 | `tip_percentage`        | Percentage of Tip Recieved based on base fare/tip       |
 | `IsRaining`             | Indicates if it is raining or not for that ride         |
 
-## 2. **K-means Clustering**
+## **2. K-means Clustering**
 - **Motivation**:
   - Previous analyses revealed weak associations between tipping behavior and trip characteristics. K-means clustering was used to uncover latent patterns in the data, providing insights into distinct rider groups and their behaviors during rush and non-rush hours.
 
@@ -48,7 +48,7 @@ layout: default
 
 ---
 
-## 3. **Model-Based Clustering**
+## **3. Model-Based Clustering**
 - **Motivation**:
   - After conducting K-means clustering, model-based clustering was applied to compare the two methods and evaluate which approach produces better-defined clusters.
 
@@ -79,7 +79,7 @@ layout: default
 
 - **Post-Hoc Analysis**:
   - For rush-hour clusters, **Bonferroni correction** was applied to compare differences between clusters for significant variables identified in the ANOVA.
-  - For non-rush-hour clusters, a **paired t-test** was used to assess differences between the two clusters based on significant variables.
+  - For non-rush-hour clusters, a **Bonferroni** was also used to assess differences between the two clusters based on significant variables.
 
 ---
 
