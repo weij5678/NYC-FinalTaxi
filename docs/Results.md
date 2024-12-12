@@ -244,3 +244,5 @@ Bonferroni-corrected pairwise comparisons were conducted to validate the observe
   - These results suggest that weather conditions did not play a major role in differentiating rider behavior or trip characteristics during non-rush hours.
 
 ---
+
+[Home](index.md)      [Data](Data.md)         [Methodology](Methodology.md)           [Results](Results.md)          [Conclusion](Conclusion.md)
