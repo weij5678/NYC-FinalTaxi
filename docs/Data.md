@@ -37,6 +37,8 @@ The dataset contains **6,939 observations**, each representing a three minute in
 6. **Created New Tip_Percentage Variable**:
    To make a more meaningful interpretation of tips, a new quantative varirable `tip_percentage` was derived from dividing tips by base passenger fare (tips/base passenger fare*100) to better analyzing tipping trends.
 
+7. **Created New IsRaining Variable**:
+    To make a more meaningful interpretation of weather conditions, a new quantative varirable `IsRaining` was derived from collapsing the `WeatherCondition` into a binary variable (Raining or Not Raining).
 ---
 
 ## **Variable Descriptions**
@@ -78,7 +80,8 @@ The dataset contains **6,939 observations**, each representing a three minute in
 | `puloc_lng`             | Longitude of Pickup Location Id                         | Decimal, range: '-74.2' to '-73.6'               | Google Maps API                |
 | `doloc_lat`             | Latitude of Dropoff Location Id                         | Decimal, range: '40.5' to '41.2'                 | Google Maps API                |
 | `doloc_lat`             | Longitude of Dropoff Location Id                        | Decimal, range: '-74.2' to '-73.6'               | Google Maps API                |
-| `tip_percentage`        | Percentage of Tip Recieved based on base fare/tip       | Decimal, range: '0' to '100'                     | Derived from 'tips'            |
+| `tip_percentage`        | Percentage of Tip Recieved based on base fare/tip       | Decimal, range: '0' to '100'                     | Derived from `tips`            |
+| `IsRaining`             | Indicates if it is raining or not for that ride         | Categorical: `Yes`, `No`                         | Derived from `WeatherCondition`|
 
 ---
 
