@@ -10,7 +10,7 @@ This section presents the key results from K-means clustering, Model-Based Clust
 
 ---
 
-## 1. **K-means Clustering**
+## **1. K-means Clustering**
 - Clustering analysis was conducted separately for two time periods: Rush hour (Morning) and Non-Rush hour (Noon).
 - K-means clustering was initialized using hierarchical clustering to determine starting cluster centers.
 
@@ -23,8 +23,8 @@ The plot below visualizes the K-means clustering (k = 3) results for the morning
 <img src="images/MorningKmeans.png" alt="drawing" width="600"/>
 
 - **Interpretation**:
-  - **Cluster 3 (blue)** is positioned on the **negative side of PC1**, representing trips with higher trip characteristics (e.g., longer trips, higher charges, and more tolls).
-  - **Cluster 2 (green)** is positioned on the **positive side of PC1**, indicating trips with lower trip characteristics (e.g., shorter trips, lower charges, and likely fewer tolls).
+  - **Cluster 3 (blue)** is positioned on the **negative side of PC1**, representing trips with higher trip characteristics (longer trips, higher charges, and more tolls).
+  - **Cluster 2 (green)** is positioned on the **positive side of PC1**, indicating trips with lower trip characteristics (shorter trips, lower charges, and likely fewer tolls).
   - **Cluster 1 (red)** lies in between, capturing trips with moderate trip characteristics.
   - PC1 drives most of the separation, highlighting the importance of trip-related factors, while PC2 contributes less to differentiation, capturing secondary factors like tipping behavior or weather.
 
@@ -75,11 +75,11 @@ The plot below visualizes the K-means clustering (k = 2) results for the noon da
 ---
 
 
-## 2. **Model-Based Clustering**
+## **2. Model-Based Clustering**
 The plot below visualizes the Model-Based Clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
 
 ### **a. Testing Model-Based Assumptions**
-To determine the suitability of model-based clustering, it is important to examine the distributions of all the variables to check if they follow a Gaussian-like distribution, particularly with multimodal patterns. Below is a Kernel Density plot of six selected variables: Trip Miles, Trip Time, Black Car Fee, Base Fare, Tip Percentage, and Temperature.
+To determine the suitability of model-based clustering, it is important to examine the distributions of all the variables to check if they follow a Gaussian-like distribution, particularly with multimodal patterns. Below is a Kernel Density plot of six selected variables: `Trip Miles`, `Trip Time`, `Black Car Fee`, `Base Fare`, `Tip Percentage`, and `Temperature`.
 
 <img src="images/KDE.png" alt="drawing" width="600"/>
 
@@ -138,7 +138,7 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 
 ---
 
-## 3. **Inference**
+## **3. Inference**
 - The clustering results were analyzed using inference to gain insights into rider behavior, tipping habits, trip characteristics, and the influence of external factors such as weather and time of day.
 
 ### **a. Rush Hour Inference**
