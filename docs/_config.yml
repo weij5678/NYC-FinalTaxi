@@ -5,7 +5,7 @@ url: "https://weij5678.github.io/NYC-FinalTaxi/"
 author: Weiran Jiang
 
 # Theme settings
-theme: minima # You can replace this with other supported GitHub Pages themes like jekyll-theme-cayman, slate, etc.
+theme: jekyll-theme-cayman # You can replace this with other supported GitHub Pages themes like jekyll-theme-cayman, slate, etc.
 
 header_pages:
   - Data.md
