@@ -15,7 +15,7 @@ This section presents the key results from K-means clustering, Model-Based Clust
 - K-means clustering was initialized using hierarchical clustering to determine starting cluster centers.
 
 
-### a. **Rush Hour (Morning) K-means Clusters**:
+### **a. Rush Hour (Morning) K-means Clusters**:
 The plot below visualizes the K-means clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
 
 - **K-means Plot**:
@@ -50,7 +50,7 @@ The plot below visualizes the K-means clustering (k = 3) results for the morning
   - Based on visualizations and interpretability of the clustering results, **k = 3** was chosen to better differentiate distinct rider behaviors during rush hour.
 
 
-### b. **Non-Rush Hour (Noon) K-means Clusters**
+### **b. Non-Rush Hour (Noon) K-means Clusters**
 The plot below visualizes the K-means clustering (k = 2) results for the noon data, projected onto the first two principal components (PC1 and PC2). The clusters (1 and 2) are color-coded as red and blue, respectively.
 
 - **K-means Plot**:
@@ -78,11 +78,11 @@ The plot below visualizes the K-means clustering (k = 2) results for the noon da
 ## 2. **Model-Based Clustering**
 The plot below visualizes the Model-Based Clustering (k = 3) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters (1, 2, and 3) are color-coded as red, green, and blue, respectively.
 
-### a. **Testing Model-Based Assumptions**
+### **a. Testing Model-Based Assumptions**
 
 
 
-### b. **Rush Hour (Morning) Model-Based Clustering**
+### **b. Rush Hour (Morning) Model-Based Clustering**
 
 - **Morning Model-Based Plot**:
   
@@ -102,7 +102,7 @@ The plot below visualizes the Model-Based Clustering (k = 3) results for the mor
   - From the BIC plot above, it shows that the most optimal model is Mclust VEV (ellipsoidal, equal shape) model with 3 clusters. 
 
   
-### c. **Non-Rush Hour (Noon) Model-Based Plots**
+### **c. Non-Rush Hour (Noon) Model-Based Plots**
 The plot below visualizes the Model-Based Clustering (k = 6) results for the morning data, projected onto the first two principal components (PC1 and PC2). The clusters are are color-coded below:
 
 - **Noon Model-Based Plot**:
@@ -123,7 +123,7 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
   - From the BIC plot above, it shows that the most optimal model is Mclust VEV (ellipsoidal, equal shape) model with 6 clusters.
 
  
-### d. **Comparing K-means vs Model Based Clustering Methods**
+### **d. Comparing K-means vs Model Based Clustering Methods**
 - We aim to compare the K-means and Model-Based clusters to determine which method is more suitable for inference.
 - To make this comparison, we assess the clusters based on their ability to minimize the total within-cluster variation and maximize the total between-cluster variation.
 - The diagram below indicate that K-means clustering is the most optimal approach for both rush hour (blue) and non-rush hour (red), as it minimizes the total within-cluster variation while maximizing the total between-cluster variation.
@@ -136,7 +136,7 @@ The plot below visualizes the Model-Based Clustering (k = 6) results for the mor
 ## 3. **Inference**
 - The clustering results were analyzed using inference to gain insights into rider behavior, tipping habits, trip characteristics, and the influence of external factors such as weather and time of day.
 
-### a. **Rush Hour Inference**
+### **a. Rush Hour Inference**
 
 #### **MANOVA Inference**
 - The MANOVA test was conducted to examine differences across rush hour clusters for the following variables:
@@ -191,7 +191,7 @@ Bonferroni-corrected pairwise comparisons were conducted for rush hour clusters 
   - Rainy conditions played a role in clustering. Cluster 1 had the highest proportion of trips during rain, indicating it is most associated with weather-affected riders. Cluster 3 had the lowest proportion of trips during rain, suggesting that these trips are less influenced by inclement weather. Cluster 2 fell between the other clusters, with a lower proportion of trips during rain than Cluster 1 but not significantly different from Cluster 3.
 
 
-### b. **Non-Rush Hour Inference**
+### **b. Non-Rush Hour Inference**
 
 #### **MANOVA Inference**
 - The MANOVA test was conducted to examine differences across the non-rush hour clusters for the following variables:
