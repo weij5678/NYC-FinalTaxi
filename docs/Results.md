@@ -4,7 +4,7 @@ layout: default
 ---
 [Home](index.md) / [Data](Data.md) / [Methodology](Methodology.md) / [Results](Results.md) / [Conclusion](Conclusions.md)
 
-# Results and Visualizations
+# **Results and Visualizations**
 
 This section presents the key results from K-means clustering, Model-Based Clustering, and Inference to better understand the factors influencing tipping behavior and FHV ride patterns.
 
