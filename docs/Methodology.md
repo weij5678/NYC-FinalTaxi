@@ -80,5 +80,5 @@ layout: default
 
 ---
 # Next Up
-[Methodology](Methodology.md)
+[Results](Results.md)
 
