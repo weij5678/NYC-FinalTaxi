@@ -79,6 +79,6 @@ layout: default
   - For non-rush-hour clusters, a **paired t-test** was used to assess differences between the two clusters based on significant variables.
 
 ---
-# Next Up
-[Results](Results.md)
+# Previous Page                                                                                                                                     # Next Page
+[Data](Data.md)                                                                                                                                     [Results](Results.md)
 
